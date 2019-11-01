@@ -2,14 +2,14 @@
 A backup of my dotfiles for linux
 
 ### Some details
-* WM: Qtile
-* Terminal: Alacritty
-* File Manager: PCManFM
-* Launcher: Rofi
-* Editor: Vim
-* Browser: Firefox
+* *WM*: Qtile
+* *Terminal*: Alacritty
+* *File Manager*: PCManFM
+* *Launcher*: Rofi
+* *Editor*: Vim
+* *Browser*: Firefox
 
-###Qtile key bindings
+### Qtile key bindings
 **Keyboard**
 General Key bindings
 * `super + w` - Kill program
