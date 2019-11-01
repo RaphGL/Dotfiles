@@ -38,7 +38,8 @@ Program launching key bindings
 Toggle layouts  
 * `super + control + space` - Toggle floating window  
 * `super + control + f` - Toggle fullscreen 
-**Mouse**
-* `super + right click` - Move floating window
-* `super + left click` - Resize floating window
+
+**Mouse**  
+* `super + right click` - Move floating window  
+* `super + left click` - Resize floating window  
 
