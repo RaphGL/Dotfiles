@@ -1,11 +1,3 @@
-#  _____   __
-# |      \|  |
-# |       |  |      Made by Rafael Lopes
-# |      /|  |___
-# |  |\  \|      |
-# |__| \__\------
-#
-
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
@@ -88,8 +80,8 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Systray(),
-                widget.Volume(),
-                widget.Clock(format='%A - %B %d,%Y  %I:%M %p'),
+                widget.Volume(volume_app="pulseaudio"),
+                widget.Clock(format='%A - %B %d, %Y  %I:%M %p'),
             ],
             30,
         ),
