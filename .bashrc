@@ -14,6 +14,12 @@ HISTCONTROL=ignoreboth
 
 #VIM mode in bash
 set -o vi
+# Japanese Input
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -d -x
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
