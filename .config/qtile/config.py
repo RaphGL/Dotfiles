@@ -63,7 +63,7 @@ for i in groups:
 #My preferred layouts
 layouts = [
     layout.Max(),
-    layout.MonadTall(border_focus="#FFFFFF", border_width=1, margin=8),
+    layout.MonadTall(border_focus="#6272a4", border_width=2, margin=8),
 ]
 
 widget_defaults = dict(
@@ -79,8 +79,11 @@ screens = [
                 widget.GroupBox(inactive='#44475a', disable_drag=True, hide_unused=True, this_current_screen_border='#6272a4', highlight_method='block', rounded=True, use_mouse_wheel=False),
                 widget.WindowName(),
                 widget.Systray(),
+                widget.TextBox(' |'),
+                widget.Pacman(),
                 widget.Volume(volume_app="pulseaudio"),
-                widget.Clock(format='%A - %B %d, %Y  %I:%M %p'),
+                widget.TextBox('|'),
+                widget.Clock(format='%A, %B %d, %Y  %I:%M %p'),
             ],
             25, background='#21222c',
         ),
