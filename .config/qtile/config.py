@@ -76,14 +76,13 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(disable_drag=True, hide_unused=True),
-                widget.Prompt(),
+                widget.GroupBox(inactive='#44475a', disable_drag=True, hide_unused=True, this_current_screen_border='#6272a4', highlight_method='block', rounded=True, use_mouse_wheel=False),
                 widget.WindowName(),
                 widget.Systray(),
                 widget.Volume(volume_app="pulseaudio"),
                 widget.Clock(format='%A - %B %d, %Y  %I:%M %p'),
             ],
-            30,
+            25, background='#21222c',
         ),
     ),
 ]
