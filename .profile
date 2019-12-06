@@ -1,2 +1,3 @@
-export EDITOR=/usr/bin/vim
-export BROWSER=/usr/bin/firefox
+export EDITOR="nvim"
+export BROWSER="firefox"
+alias vim="nvim"

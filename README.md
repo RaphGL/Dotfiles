@@ -43,3 +43,8 @@ Toggle layouts
 * `super + right click` - Move floating window  
 * `super + left click` - Resize floating window  
 
+### Neovim dependencies  
+*Pynvim*  
+`sudo pip install pynvim`  
+*Jedi*
+`sudo pip install jedi`  
