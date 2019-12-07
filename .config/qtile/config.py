@@ -1,8 +1,8 @@
+import os
+import subprocess
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
-import os
-import subprocess
 
 mod = "mod4"
 
@@ -19,10 +19,10 @@ keys = [
     Key([mod], "Tab", lazy.next_layout()),
 
     #Move between windows
-    Key([mod], "j",lazy.layout.down()),
-    Key([mod], "k",lazy.layout.up()),
-    Key([mod], "h",lazy.layout.left()),
-    Key([mod], "l",lazy.layout.right()),
+    Key([mod], "j", lazy.layout.down()),
+    Key([mod], "k", lazy.layout.up()),
+    Key([mod], "h", lazy.layout.left()),
+    Key([mod], "l", lazy.layout.right()),
 
     #Change size of windows
     Key([mod], "i", lazy.layout.grow()),
@@ -31,15 +31,14 @@ keys = [
     Key([mod], "o", lazy.layout.maximize()),
 
     #Move the windows around
-    Key([mod, "control"], "j",lazy.layout.shuffle_down()),
-    Key([mod, "control"], "k",lazy.layout.shuffle_up()),
-    Key([mod, "control"], "h",lazy.layout.swap_left()),
-    Key([mod, "control"], "l",lazy.layout.swap_right()),
+    Key([mod, "control"], "j", lazy.layout.shuffle_down()),
+    Key([mod, "control"], "k", lazy.layout.shuffle_up()),
+    Key([mod, "control"], "h", lazy.layout.swap_left()),
+    Key([mod, "control"], "l", lazy.layout.swap_right()),
 
     #Personal Key bindings for programs
     Key([mod], "r", lazy.spawn("rofi -show run")),
-    Key([mod], "Return", lazy.spawn("konsole")),
-    Key([mod, "shift"], "f", lazy.spawncmd("ranger")),
+    Key([mod], "Return", lazy.spawn("urxvt")),
     Key([mod], "F1", lazy.spawn("pcmanfm")),
     Key([mod], "F2", lazy.spawn("firefox")),
 
