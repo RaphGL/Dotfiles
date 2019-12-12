@@ -14,7 +14,6 @@ call plug#begin()
 	"Fuzzy finder
 	Plug 'ctrlpvim/ctrlp.vim'
   Plug 'airblade/vim-gitgutter'
-	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "Initialize plugins""

@@ -4,6 +4,8 @@
 
 #aliases
 alias vim="nvim"
+alias nvimcfg="vim ~/.config/nvim/init.vim"
+alias qtilecfg="vim ~/.config/qtile/config.py"
 
 # If not running interactively, don't do anything
 case $- in
