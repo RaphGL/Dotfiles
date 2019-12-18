@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 nitrogen --restore &
-compton &
+picom &
 ibus-daemon &

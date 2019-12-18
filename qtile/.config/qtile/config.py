@@ -24,7 +24,7 @@ keys = [
     Key([mod], "h", lazy.layout.left()),
     Key([mod], "l", lazy.layout.right()),
 
-    #Change size of windows
+    #Change window size
     Key([mod], "i", lazy.layout.grow()),
     Key([mod], "u", lazy.layout.shrink()),
     Key([mod], "y", lazy.layout.normalize()),

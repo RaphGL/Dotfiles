@@ -57,7 +57,6 @@ rofi.color-normal:                   argb:a02f1e2e, #f8f8f2, argb:a02f1e2e, argb
 rofi.color-urgent:                   argb:272f1e2e, #000000, argb:2f2f1e2e, argb:54815ba4, #ef6155
 ! Color scheme for active row
 rofi.color-active:                   argb:272f1e2e, #6272a4, argb:2f2f1e2e, argb:54815ba4, #815ba4
-! Color scheme window
 rofi.color-window:                   #282a36, argb:36ef6155, argb:2fef6155
 ! Separator style (none, dash, solid)
 rofi.separator-style:                dasho, #6272a4
