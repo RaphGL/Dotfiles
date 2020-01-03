@@ -22,6 +22,9 @@ l2
 r2
 
 # Left window history (oldest to newest):
+d/home/rafael/.config/neofetch
+	config.conf
+1
 d/home/rafael/.config
 	vifm
 34
@@ -137,8 +140,8 @@ d/home/rafael/Pictures
 	..
 0
 d/home/rafael
-	Pictures
-5
+	.Xresources
+4
 d
 
 # Right window history (oldest to newest):
@@ -151,6 +154,8 @@ D
 :w
 
 # Search history (oldest to newest):
+/confi
+/neo
 /vifm
 /config
 /nvim
@@ -170,7 +175,7 @@ pimgt
 # State:
 f
 i1
-[.1
+[.0
 [F
 F
 I1
