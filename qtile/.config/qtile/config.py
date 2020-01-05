@@ -107,7 +107,7 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating()
+floating_layout = layout.Floating(border_focus='#bd93f9', border_width=2)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 extentions = []
