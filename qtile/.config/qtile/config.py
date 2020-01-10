@@ -39,7 +39,7 @@ keys = [
     #Personal Key bindings for programs
     Key([mod], "r", lazy.spawn("rofi -show run")),
     Key([mod], "Return", lazy.spawn("urxvt")),
-    Key([mod], "F1", lazy.spawn("pcmanfm")),
+    Key([mod], "F1", lazy.spawn("thunar")),
     Key([mod], "F2", lazy.spawn("firefox")),
     Key([mod], "F3", lazy.spawn("code")),
 
