@@ -6,6 +6,6 @@ picom &
 ibus-daemon -d
 ibus restart
 # Screenshot program
-flameshot
+flameshot &
 # Switch Caps Lock and Escape keys
 setxkbmap -option caps:swapescape
