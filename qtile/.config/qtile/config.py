@@ -6,6 +6,15 @@ from libqtile import layout, bar, widget, hook
 
 mod = "mod4"
 
+color = {
+    'background': '#21222c',
+    'white': '#f8f8f2',
+    'active': '#6272a4',
+    'inactive': '#44475a',
+    'red': '#ff5555',
+    'purple': '#6272a4',
+}
+
 @hook.subscribe.startup_once
 def autostart():
     autostart = os.path.expanduser('~/.config/qtile/autostart.sh')
@@ -63,7 +72,7 @@ for i in groups:
 #My preferred layouts
 layouts = [
     layout.Max(),
-    layout.MonadTall(border_focus="#6272a4", border_width=2, margin=8),
+    layout.MonadTall(border_focus=color['active'], border_width=2, margin=8),
 ]
 
 widget_defaults = dict(
@@ -76,17 +85,20 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(inactive='#44475a', disable_drag=True, hide_unused=True, this_current_screen_border='#6272a4', highlight_method='block', rounded=True, use_mouse_wheel=False),
+                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], highlight_method='block', rounded=True, use_mouse_wheel=False),
                 widget.WindowName(),
-                widget.TextBox('🗘'),
-                widget.Pacman(),
-                widget.TextBox('  🎚 '),
-                widget.Volume(volume_app="pulseaudio"),
-                widget.Clock(format='  ⌛ %A, %B %d, %Y  🕑 %I:%M %p'),
-                widget.TextBox(' |'),
-                widget.Systray(),
+                widget.Image(filename='~/.config/qtile/powerline2.png'),
+                widget.TextBox('🗘', background=color['purple']),
+                widget.Pacman(background=color['purple'], foreground=color['white']),
+                widget.Image(filename='~/.config/qtile/powerline1.png'),
+                widget.TextBox('🎚', background=color['inactive']),
+                widget.Volume(volume_app="pulseaudio", background=color['inactive']),
+                widget.Image(filename='~/.config/qtile/powerline0.png'),
+                widget.Clock(background=color['purple'], foreground=color['white'], format='⌛ %A - %B %d, %Y  🕑 %I:%M %p'),
+                widget.Image(filename='~/.config/qtile/powerline1.png'),
+                widget.Systray(background=color['inactive']),
             ],
-            25, background='#21222c',
+            25, background=color['background'],
         ),
     ),
 ]
@@ -107,7 +119,7 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(border_focus='#bd93f9', border_width=2)
+floating_layout = layout.Floating(border_focus=color['background'], border_width=2)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 extentions = []
