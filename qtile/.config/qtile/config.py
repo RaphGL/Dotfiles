@@ -87,15 +87,21 @@ screens = [
             [
                 widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], highlight_method='block', rounded=True, use_mouse_wheel=False),
                 widget.WindowName(),
+                # System updates
                 widget.Image(filename='~/.config/qtile/powerline2.png'),
-                widget.TextBox('🗘', background=color['purple']),
+                widget.Image(filename='~/.config/qtile/icons/update.png'),
                 widget.Pacman(background=color['purple'], foreground=color['white']),
+                # Volume control
                 widget.Image(filename='~/.config/qtile/powerline1.png'),
-                widget.TextBox('🎚', background=color['inactive']),
+                widget.Image(filename='~/.config/qtile/icons/volume.png'),
                 widget.Volume(volume_app="pulseaudio", background=color['inactive']),
+                # Date and time widget
                 widget.Image(filename='~/.config/qtile/powerline0.png'),
-                widget.Clock(background=color['purple'], foreground=color['white'], format='⌛ %A - %B %d, %Y  🕑 %I:%M %p'),
+                widget.Image(filename='~/.config/qtile/icons/calendar.png'),
+                widget.Clock(background=color['purple'], foreground=color['white'], format='%A - %B %d, %Y  %I:%M %p'),
+                # System tray
                 widget.Image(filename='~/.config/qtile/powerline1.png'),
+                widget.Image(filename='~/.config/qtile/icons/systray.png'),
                 widget.Systray(background=color['inactive']),
             ],
             25, background=color['background'],
