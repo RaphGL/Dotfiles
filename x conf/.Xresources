@@ -45,18 +45,3 @@ URxvt*font: xft: Source Code Pro:Semibold:size=11
 URxvt*boldFont: xft:Source Code Pro:Bold
 URxvt*italicFont: xft:Source Code Pro Medium:Italic
 URxvt*boldItalicFont: xft:Source Code Pro Medium:Bold Italic
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-! Use extended color scheme
-rofi.color-enabled:                  true
-! Clor scheme for normal row
-rofi.color-normal:                   argb:a02f1e2e, #f8f8f2, argb:a02f1e2e, argb:54815ba4, #f8f8f2
-! Color scheme for urgent row
-rofi.color-urgent:                   argb:272f1e2e, #000000, argb:2f2f1e2e, argb:54815ba4, #ef6155
-! Color scheme for active row
-rofi.color-active:                   argb:272f1e2e, #6272a4, argb:2f2f1e2e, argb:54815ba4, #815ba4
-rofi.color-window:                   #282a36, argb:36ef6155, argb:2fef6155
-! Separator style (none, dash, solid)
-rofi.separator-style:                dasho, #6272a4
