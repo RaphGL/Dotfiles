@@ -164,8 +164,8 @@ d/home/rafael/.config
 	qtile
 16
 d/home/rafael/.config/qtile
-	autostart.sh
-3
+	icons
+2
 d
 
 # Right window history (oldest to newest):

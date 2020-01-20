@@ -1,4 +1,4 @@
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export KEYTIMEOUT=1
 
 alias vim="nvim"
@@ -14,4 +14,4 @@ plugins=(
   colored-man-pages
 )
 source $ZSH/oh-my-zsh.sh
-source /home/rafael/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
