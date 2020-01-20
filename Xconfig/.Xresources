@@ -38,7 +38,7 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 ! Background Transparency
 URxvt.tintColor: #282A36
 URxvt*inheritPixmap: true
-URxvt*transparent: true
+!URxvt*transparent: true
 URxvt*shading: 110
 ! Fonts
 URxvt*font: xft: Source Code Pro:Semibold:size=11

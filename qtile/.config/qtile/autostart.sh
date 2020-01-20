@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Visual candy
 nitrogen --restore &
-picom &
+picom -b &
 # Keyboard layout 
 ibus-daemon -d
 ibus restart
