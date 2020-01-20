@@ -39,7 +39,7 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.tintColor: #282A36
 URxvt*inheritPixmap: true
 URxvt*transparent: true
-URxvt*shading: 112
+URxvt*shading: 110
 ! Fonts
 URxvt*font: xft: Source Code Pro:Semibold:size=11
 URxvt*boldFont: xft:Source Code Pro:Bold

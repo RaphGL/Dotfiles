@@ -13,6 +13,7 @@ color = {
     'inactive': '#44475a',
     'red': '#ff5555',
     'purple': '#6272a4',
+    'blue': '#8be9fd',
 }
 
 @hook.subscribe.startup_once
@@ -125,7 +126,7 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(border_focus=color['background'], border_width=2)
+floating_layout = layout.Floating(border_focus=color['blue'], border_width=2)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 extentions = []
