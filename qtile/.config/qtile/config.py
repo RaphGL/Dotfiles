@@ -25,6 +25,7 @@ keys = [
     #General Key bindings
     Key([mod], "w", lazy.window.kill()),
     Key([mod, "control"], "0", lazy.shutdown()),
+    Key([mod, "control"], "9", lazy.spawn("betterlockscreen -l")),
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod], "Tab", lazy.next_layout()),
 
@@ -47,6 +48,9 @@ keys = [
     Key([mod, "control"], "l", lazy.layout.swap_right()),
 
     #Personal Key bindings for programs
+    Key([mod], "c", lazy.spawn("urxvt -e calcurse")),
+    Key([mod], "F4", lazy.spawn("urxvt -e htop")),
+    Key([mod], "m", lazy.spawn("urxvt -e cmus")),
     Key([mod], "r", lazy.spawn("rofi -show run")),
     Key([mod], "Return", lazy.spawn("urxvt")),
     Key([mod], "F1", lazy.spawn("thunar")),

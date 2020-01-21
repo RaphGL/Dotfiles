@@ -1,6 +1,6 @@
 #!/bin/env bash
 # Downloading Packages
-pacman --needed -S gnome-font-viewer ibus ibus-anthy lxappearance code telegram-desktop thunar neofetch neovim npm python-pip rofi zsh flameshot qtile yay nitrogen surf stow rxvt-unicode zathura zathura-pdf-mupdf curl
+pacman --needed -S gnome-font-viewer ibus ibus-anthy lxappearance code telegram-desktop thunar neofetch neovim npm python-pip rofi zsh flameshot qtile yay nitrogen surf stow rxvt-unicode zathura zathura-pdf-mupdf curl git calcurse
 
 # Setting up "Oh my Zsh!"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && env zsh | chsh
@@ -26,5 +26,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+#Installing screenlocker
+git clone https://github.com/pavanjadhaw/betterlockscreen
+cd betterlockscreen
+mv betterlockscreen ~/.local/bin/
+cd .. & rm -r betterlockscreen/
+pacman -needed -S imagemagick feh xorg-xrandr xorg-xdpyinfo
 
 nvim -c ":PlugInstall"

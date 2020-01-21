@@ -1,3 +1,6 @@
 __pycache__/
 plugged/
 vifminfo
+.calcurse/notes
+.calcurse/hooks
+.calcurse/todo
