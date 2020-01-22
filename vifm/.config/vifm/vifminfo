@@ -164,8 +164,41 @@ d/home/rafael/.config
 	qtile
 16
 d/home/rafael/.config/qtile
-	powerline2.png
-8
+	default_config.py
+5
+d/home/rafael/.config
+	qtile
+30
+d/home/rafael
+	.config
+4
+d/home
+	..
+0
+d/
+	home
+4
+d/home
+	rafael
+1
+d/home/rafael
+	Documents
+22
+d/home/rafael/Documents
+	books
+1
+d/home/rafael
+	Documents
+22
+d/home/rafael/Documents
+	repos
+3
+d/home/rafael/Documents/repos
+	mangawind
+2
+d/home/rafael/Documents/repos/mangawind
+	downloader.py
+7
 d
 
 # Right window history (oldest to newest):

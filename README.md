@@ -47,13 +47,13 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 
 After cloning cloning the repository run:  
 ```sh
-sudo sh install_dotfiles.sh #still working on it
+cd ~/dotfiles && sudo sh install_dotfiles.sh #still working on it
 ```  
 
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  
 ```sh
-rm README.md *.png && stow --adopt *
+cd ~/dotfiles && rm README.md *.png && stow --adopt *
 ```  
 Note:  
 You will probably want to edit Qtile's config file and install the following if you intend to use my Zsh and Vim configurations:  
