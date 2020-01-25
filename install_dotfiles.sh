@@ -1,7 +1,8 @@
 #!/bin/env bash
 # Downloading Packages
-pacman --needed -S gnome-font-viewer ibus ibus-anthy lxappearance code telegram-desktop thunar neofetch neovim npm python-pip rofi \
-	zsh flameshot qtile yay nitrogen surf stow rxvt-unicode zathura zathura-pdf-mupdf curl git calcurse anki imagemagick feh xorg-xrandr xorg-xdpyinfo
+pacman --needed -S gnome-font-viewer lxappearance code telegram-desktop thunar neofetch neovim npm python-pip rofi \
+	zsh flameshot qtile yay nitrogen surf stow rxvt-unicode zathura zathura-pdf-mupdf curl git calcurse anki imagemagick feh \
+	xorg-xrandr xorg-xdpyinfo fcitx fcixt-im fcitx-mozc sxiv ranger pass
 
 # Setting up "Oh my Zsh!"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
@@ -31,5 +32,5 @@ cd betterlockscreen
 mv betterlockscreen $HOME/.local/bin/
 cd .. & rm -r betterlockscreen/
 
-env zsh | chsh
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+env zsh | chsh

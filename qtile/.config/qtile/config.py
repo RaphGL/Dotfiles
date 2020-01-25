@@ -48,14 +48,15 @@ keys = [
     Key([mod, "control"], "l", lazy.layout.swap_right()),
 
     #Personal Key bindings for programs
+    Key([mod], "v", lazy.spawn("urxvt -e ranger")),
     Key([mod], "c", lazy.spawn("urxvt -e calcurse")),
-    Key([mod], "F4", lazy.spawn("urxvt -e htop")),
     Key([mod], "m", lazy.spawn("urxvt -e cmus")),
     Key([mod], "r", lazy.spawn("rofi -show run")),
     Key([mod], "Return", lazy.spawn("urxvt")),
     Key([mod], "F1", lazy.spawn("thunar")),
     Key([mod], "F2", lazy.spawn("firefox")),
     Key([mod], "F3", lazy.spawn("code")),
+    Key([mod], "F4", lazy.spawn("urxvt -e htop")),
 
    # Toggle between different layouts
    Key([mod, "control"], "space", lazy.window.toggle_floating()),

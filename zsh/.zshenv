@@ -3,8 +3,8 @@ export VISUAL="nvim"
 export BROWSER="firefox"
 
 # gtk application
-export GTK_IM_MODULE=ibus
+export GTK_IM_MODULE=fcitx
 # kde application
-export QT_IM_MODULE=ibus
+export QT_IM_MODULE=fcitx
 # old X application
-export XMODIFIERS=@im=ibus
+export XMODIFIERS=@im=fcitx

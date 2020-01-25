@@ -1,6 +1,7 @@
 # Keybindings
 #
 #
+set selection-clipboard clipboard
 map i recolor
 map u scroll half-up
 map d scroll half-down
