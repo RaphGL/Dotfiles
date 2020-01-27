@@ -2,7 +2,7 @@
 # Downloading Packages
 pacman --needed -S gnome-font-viewer lxappearance code telegram-desktop thunar neofetch neovim npm python-pip rofi \
 	zsh flameshot qtile yay nitrogen surf stow rxvt-unicode zathura zathura-pdf-mupdf curl git calcurse anki imagemagick feh \
-	xorg-xrandr xorg-xdpyinfo fcitx fcixt-im fcitx-mozc sxiv ranger pass xclip gscan2pdf 
+	xorg-xrandr xorg-xdpyinfo fcitx fcixt-im fcitx-mozc sxiv ranger pass xclip gscan2pdf youtube-dl
 #Downloading fonts
 pacman -needed -S adobe-source-han-sans-jp-fonts adobe-source-code-pro-fonts
 

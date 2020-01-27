@@ -34,6 +34,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Program Launcher        | super + r                      |
 | Calendar app            | super + c                      |
 | Music player            | super + m                      |
+| Terminal file manager   | super + v                      |
 | Terminal                | super + return                 |
 | File Manager            | super + F1                     |
 | Firefox                 | super + F2                     |

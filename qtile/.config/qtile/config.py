@@ -92,23 +92,23 @@ screens = [
         top=bar.Bar(
             [
                 #Groups and Window names
-                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0, borderwidth=4),
-                widget.WindowName(),
+                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0, borderwidth=4),
+                widget.WindowName(fontsize=15),
                 # System updates
-                widget.Image(filename='~/.config/qtile/powerline2.png'),
-                widget.Image(filename='~/.config/qtile/icons/update.png'),
+                widget.Image(filename='~/.config/qtile/endbright.png'),
+                widget.Image(filename='~/.config/qtile/icons/updatebright.png'),
                 widget.Pacman(background=color['purple'], foreground=color['white']),
                 # Volume control
-                widget.Image(filename='~/.config/qtile/powerline1.png'),
-                widget.Image(filename='~/.config/qtile/icons/volume.png'),
+                widget.Image(filename='~/.config/qtile/powerlinedark.png'),
+                widget.Image(filename='~/.config/qtile/icons/volumedark.png'),
                 widget.Volume(volume_app="pulseaudio", background=color['inactive']),
                 # Date and time widget
-                widget.Image(filename='~/.config/qtile/powerline0.png'),
-                widget.Image(filename='~/.config/qtile/icons/calendar.png'),
+                widget.Image(filename='~/.config/qtile/powerlinebright.png'),
+                widget.Image(filename='~/.config/qtile/icons/calendarbright.png'),
                 widget.Clock(background=color['purple'], foreground=color['white'], format='%A - %B %d, %Y  %I:%M %p'),
                 # System tray
-                widget.Image(filename='~/.config/qtile/powerline1.png'),
-                widget.Image(filename='~/.config/qtile/icons/systray.png'),
+                widget.Image(filename='~/.config/qtile/powerlinedark.png'),
+                widget.Image(filename='~/.config/qtile/icons/systraydark.png'),
                 widget.Systray(background=color['inactive']),
             ],
             25, background=color['background'],
