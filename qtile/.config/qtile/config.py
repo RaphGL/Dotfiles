@@ -82,16 +82,17 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Arial',
+    font='Source Han Sans JP Medium',
     fontsize=16,
-    padding=3,
+    padding=4,
 )
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], highlight_method='block', rounded=True, use_mouse_wheel=False),
+                #Groups and Window names
+                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0, borderwidth=4),
                 widget.WindowName(),
                 # System updates
                 widget.Image(filename='~/.config/qtile/powerline2.png'),
