@@ -49,7 +49,8 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 After cloning cloning the repository run:  
 ```sh
 cd ~/dotfiles && sudo sh install_dotfiles.sh #still working on it
-```  
+```   
+Note: The script only works with arch-based distros.   
 
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  

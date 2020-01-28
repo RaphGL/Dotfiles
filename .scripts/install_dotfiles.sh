@@ -35,4 +35,4 @@ mv betterlockscreen $HOME/.local/bin/
 cd .. & rm -r betterlockscreen/
 
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-env zsh | chsh
+chsh -s /bin/zsh

@@ -2,8 +2,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export KEYTIMEOUT=1
 
 alias vim="nvim"
-alias nvimc="vim ~/.config/nvim/init.vim"
-alias qtilec="vim ~/.config/qtile/config.py"
+alias nvimc="$EDITOR ~/.config/nvim/init.vim"
+alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias gcc99="gcc -std=c99"
 
 ZSH_THEME="gentoo"
