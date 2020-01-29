@@ -1,5 +1,5 @@
 __pycache__/
-pluggled/
+nvim/.config/nvim/pluggled/
 vifminfo
 .calcurse/notes
 .calcurse/hooks
