@@ -51,6 +51,7 @@ After cloning cloning the repository run:
 cd ~/dotfiles && sudo sh install_dotfiles.sh #still working on it
 ```   
 Note: The script only works with arch-based distros.   
+If you want japanese on the terminal you should install this [font](https://github.com/adobe-fonts/source-han-code-jp/releases/).
 
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  
