@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Visual candy
 nitrogen --restore &
-picom -b &
+picom -b
 # Keyboard layout 
 fcitx -d
 # Screenshot program

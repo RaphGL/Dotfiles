@@ -1,1 +1,1 @@
-yay -S lightdm-webkit-theme-aether           
+yay -S lightdm-webkit-theme-aether 
