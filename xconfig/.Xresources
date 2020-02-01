@@ -34,6 +34,9 @@ URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.resize-font.smaller:  C-j
+URxvt.resize-font.bigger:  C-k
+
 ! Background Transparency
 URxvt.tintColor: #282A36
 URxvt*inheritPixmap: true

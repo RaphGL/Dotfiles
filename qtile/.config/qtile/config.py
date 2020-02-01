@@ -5,6 +5,7 @@ from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 
 mod = "mod4"
+confirm_prompt = widget.Prompt()
 
 color = {
     'background': '#21222c',
@@ -25,7 +26,7 @@ keys = [
     #General Key bindings
     Key([mod], "w", lazy.window.kill()),
     Key([mod, "control"], "0", lazy.shutdown()),
-    Key([mod, "control"], "9", lazy.spawn("betterlockscreen -l")),
+    Key([mod, "control"], "9", lazy.spawn('betterlockscreen -l')),
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod], "Tab", lazy.next_layout()),
 
@@ -57,6 +58,8 @@ keys = [
     Key([mod], "F2", lazy.spawn("firefox")),
     Key([mod], "F3", lazy.spawn("code")),
     Key([mod], "F4", lazy.spawn("urxvt -e htop")),
+    Key([mod], "F5", lazy.spawn("thunderbird")),
+    Key([mod], "F6", lazy.spawn("joplin-desktop")),
 
    # Toggle between different layouts
    Key([mod, "control"], "space", lazy.window.toggle_floating()),
@@ -94,6 +97,7 @@ screens = [
                 #Groups and Window names
                 widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0, borderwidth=4),
                 widget.WindowName(fontsize=15),
+                confirm_prompt,
                 # System updates
                 widget.Image(filename='~/.config/qtile/endbright.png'),
                 widget.Image(filename='~/.config/qtile/icons/updatebright.png'),
