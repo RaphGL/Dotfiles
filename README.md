@@ -26,6 +26,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Lock screen             | super + control + 9            |
 | Restart Qtile           | super + control + r            |
 | Switch layout           | super + tab                    |
+| Volume control          | super + arrow keys             |
 | **Moving around**                                        |
 | Move between windows    | super + [h, j, k, l]           |
 | Change window size      | super + [y, u, i, o]           |
@@ -46,7 +47,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 
 ## Installation  
 
-After cloning cloning the repository run:  
+After cloning the repository run:  
 ```sh
 cd ~/dotfiles && sudo sh install_dotfiles.sh #still working on it
 ```   

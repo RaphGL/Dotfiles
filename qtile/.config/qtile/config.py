@@ -48,6 +48,12 @@ keys = [
     Key([mod, "control"], "h", lazy.layout.swap_left()),
     Key([mod, "control"], "l", lazy.layout.swap_right()),
 
+    #Volume control
+    Key([mod], "Up", lazy.spawn("pactl set-sink-volume 0 +5%")),
+    Key([mod], "Right", lazy.spawn("pactl set-sink-volume 0 +1%")),
+    Key([mod], "Down", lazy.spawn("pactl set-sink-volume 0 -5%")),
+    Key([mod], "Left", lazy.spawn("pactl set-sink-volume 0 -1%")),
+
     #Personal Key bindings for programs
     Key([mod], "v", lazy.spawn("urxvt -e ranger")),
     Key([mod], "c", lazy.spawn("urxvt -e calcurse")),
