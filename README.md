@@ -41,6 +41,8 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Firefox                 | super + F2                     |
 | Visual Studio Code      | super + F3                     |
 | System Monitor          | super + F4                     |
+| Mail client             | super + F5                     |
+| Note-taking app         | super + F6                     |
 | **Other layouts**                                        |
 | Floating window         | super + control + space        |
 | Fullscreen              | super + f                      |

@@ -1,7 +1,7 @@
 export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
 export KEYTIMEOUT=1
 
-alias vim="nvim"
+alias v="nvim"
 alias nvimc="$EDITOR ~/.config/nvim/init.vim"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias gcc99="gcc -std=c99"
