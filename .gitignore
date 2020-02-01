@@ -1,9 +1,8 @@
 __pycache__/
 log.txt
-nvim/.config/nvim/pluggled/
+nvim/.config/nvim/pluggled/*
 .calcurse/notes
 .calcurse/hooks
 .calcurse/todo
 .calcurse/apts
 .calcurse/.calcurse.pid
-.zsh-plugins/

@@ -43,11 +43,11 @@ URxvt*inheritPixmap: true
 !URxvt*transparent: true
 URxvt*shading: 110
 ! Fonts
-URxvt*font: xft: Source Han Code JP:Regular:size=11
-URxvt*boldFont: xft: Source Han Code JP:Bold
-URxvt*italicFont: xft:Source Han Code JP:Italic
-URxvt*boldItalicFont: xft:Source Han Code JP:Bold Italic
-!URxvt*font: xft: Source Code Pro:Semibold:size=11
-!URxvt*boldFont: xft:Source Code Pro:Bold
-!URxvt*italicFont: xft:Source Code Pro Medium:Italic
-!URxvt*boldItalicFont: xft:Source Code Pro Medium:Bold Italic
+!URxvt*font: xft: Source Han Code JP:Regular:size=11
+!URxvt*boldFont: xft: Source Han Code JP:Bold
+!URxvt*italicFont: xft:Source Han Code JP:Italic
+!URxvt*boldItalicFont: xft:Source Han Code JP:Bold Italic
+URxvt*font: xft: Source Code Pro:Semibold:size=11
+URxvt*boldFont: xft:Source Code Pro:Bold
+URxvt*italicFont: xft:Source Code Pro Medium:Italic
+URxvt*boldItalicFont: xft:Source Code Pro Medium:Bold Italic
