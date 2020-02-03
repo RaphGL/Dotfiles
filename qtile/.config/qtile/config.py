@@ -50,9 +50,12 @@ keys = [
 
     #Volume control
     Key([mod], "Up", lazy.spawn("pactl set-sink-volume 0 +5%")),
-    Key([mod], "Right", lazy.spawn("pactl set-sink-volume 0 +1%")),
     Key([mod], "Down", lazy.spawn("pactl set-sink-volume 0 -5%")),
-    Key([mod], "Left", lazy.spawn("pactl set-sink-volume 0 -1%")),
+
+    # Music control
+    Key([mod], "Left", lazy.spawn("cmus-remote -r")),
+    Key([mod], "Right", lazy.spawn("cmus-remote -n")),
+    Key([mod], "p", lazy.spawn("cmus-remote -u")),
 
     #Personal Key bindings for programs
     Key([mod], "v", lazy.spawn("urxvt -e ranger")),

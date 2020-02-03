@@ -51,15 +51,21 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 
 After cloning the repository run:  
 ```sh
-cd ~/dotfiles && sudo sh install_dotfiles.sh #still working on it
+$ ./dotfiles/.scripts/install.sh #still working on it
 ```   
 Note: The script only works with arch-based distros.   
 If you want japanese on the terminal you should install this [font](https://github.com/adobe-fonts/source-han-code-jp/releases/).
 
+To install the packages needed and that I use run:
+```sh
+$ sudo ./dotfiles/.scripts/pacin.sh
+$ sudo ./dotfiles/.scripts/aurpacs
+```
+
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  
 ```sh
-cd ~/dotfiles && rm README.md *.png && stow --adopt *
+$ cd ~/dotfiles && rm *.md *.png && stow --adopt *
 ```  
 Note:  
 You will probably want to edit Qtile's config file and install the following if you intend to use my Zsh and Vim configurations:  
