@@ -15,7 +15,7 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.zsh-plugins/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
 
 # Installing dotfiles
-echo -e "\033[0;34m Setting up dotfiles...${NC}"
+echo -ne "${BLUE} Setting up dotfiles...${NC}"
 rm -rf .bashrc .vimrc .Xresources .zshenv .zshrc .config/rofi/config.rasi .config/mimeapps.list 
 cd $HOME/dotfiles
 mkdir -p .temp/
@@ -23,6 +23,7 @@ mv -t .temp *.png *.md
 stow --adopt *
 mv .temp/* $HOME/dotfiles/
 rmdir .temp/
+echo -ne "${BLUE}done${NC}"
 
-echo -e "${RED}Warning: Check your .Xresources and change it to appropriate fonts${NC}"
+# Changing default shell
 chsh -s $(which zsh)
