@@ -1,3 +1,7 @@
+# Screenlocker
+super + control + 9
+	betterlockscreen -l
+
 # Keybindings for programs
 super + v
 	urxvt -e ranger
@@ -22,9 +26,13 @@ super + F5
 super + F6
 	joplin-desktop
 
-# Screenlocker
-super + control + 9
-	betterlockscreen -l
+# Screenshot
+Print
+	flameshot full -c
+shift + Print
+	flameshot gui
+control + Print
+	flameshot full -p ~/Pictures
 
 # Volume Control
 super + Up
