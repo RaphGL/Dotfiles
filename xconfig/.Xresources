@@ -41,11 +41,8 @@ URxvt.tintColor: #282A36
 URxvt*transparent: true
 URxvt*shading: 110
 ! Fonts
-!URxvt*font: xft: Source Han Code JP:Regular:size=11
-!URxvt*boldFont: xft: Source Han Code JP:Bold
-!URxvt*italicFont: xft:Source Han Code JP:Italic
-!URxvt*boldItalicFont: xft:Source Han Code JP:Bold Italic
-URxvt*font: xft: Source Code Pro:Semibold:size=11
-URxvt*boldFont: xft:Source Code Pro:Bold
-URxvt*italicFont: xft:Source Code Pro Medium:Italic
-URxvt*boldItalicFont: xft:Source Code Pro Medium:Bold Italic
+URxvt*font: xft: Source Code Pro:Semibold:size=12,xft: Noto Sans CJK JP:Medium:size=12
+URxvt*boldFont: xft:Source Code Pro:Bold,Noto Sans CJK JP:Bold
+
+URxvt*italicFont: xft:Source Code Pro Medium:Italic,Noto Sans CJK JP:DemiLight
+URxvt*boldItalicFont: xft:Source Code Pro Medium:Bold Italic,Noto Sans CJK JP:Bold
