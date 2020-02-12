@@ -10,9 +10,9 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 ## Details  
 
 - **WM**: [Qtile](http://www.qtile.org/)  
-- **Terminal**: URxvt  
+- **Terminal**: Kitty  
 - **Application launcher**: Rofi  
-- **Wallpaper setter**: Nitrogen  
+- **Wallpaper setter**: Feh  
 - **Wallpapers**: [here](./background/Pictures)
 - **Text Editors**: NeoVim & VSCode  
 
@@ -60,7 +60,7 @@ After cloning the repository run:
 ```sh
 $ ./dotfiles/.scripts/install.sh # Functional but there are still side effects if run more than once
 ```   
-To install the packages needed and that I use run:
+To install the packages needed and that I use, run:
 ```sh
 $ sudo ./dotfiles/.scripts/pacin.sh # Installs dependencies and programs I use frequently
 $ ./dotfiles/.scripts/aurpacs.sh # Installs aur packages I use

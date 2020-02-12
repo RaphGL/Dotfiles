@@ -9,6 +9,8 @@ super + c
 	kitty calcurse
 super + m
 	kitty cmus
+super + n
+	kitty nmtui
 super + r
 	rofi -show run
 super + Return

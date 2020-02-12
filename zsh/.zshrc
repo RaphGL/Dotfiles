@@ -1,6 +1,9 @@
 export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
 
+### Aliases ###
 alias v="nvim"
+alias yt="youtube-dl"
+alias yta="youtube-dl -f bestaudio"
 alias nvimc="$EDITOR ~/.config/nvim/init.vim"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias gcc99="gcc -std=c99"
