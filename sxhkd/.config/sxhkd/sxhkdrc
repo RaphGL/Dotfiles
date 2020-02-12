@@ -1,0 +1,41 @@
+# Keybindings for programs
+super + v
+	urxvt -e ranger
+super + c
+	urxvt -e calcurse
+super + m
+	urxvt -e cmus
+super + r
+	rofi -show run
+super + Return
+	urxvt
+super + F1
+	thunar
+super + F2
+	firefox
+super + F3
+	code
+super + F4
+	urxvt -e htop
+super + F5
+	thunderbird
+super + F6
+	joplin-desktop
+
+# Screenlocker
+super + control + 9
+	betterlockscreen -l
+
+# Volume Control
+super + Up
+	pactl set-sink-volume 0 +5%
+super + Down
+	pactl set-sink-volume 0 -5%
+
+# Music Control
+super + Left
+	cmus-remote -r
+super + Right
+	cmus-remote -n
+super + p
+	cmus-remote -u

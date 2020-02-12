@@ -32,10 +32,6 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Change window size      | super + [y, u, i, o]           |
 | Move windows around     | super + control + [h, j, k, l] |
 | **Programs**                                             |
-| Program Launcher        | super + r                      |
-| Calendar app            | super + c                      |
-| Music player            | super + m                      |
-| Terminal file manager   | super + v                      |
 | Terminal                | super + return                 |
 | File Manager            | super + F1                     |
 | Firefox                 | super + F2                     |
@@ -43,8 +39,18 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | System Monitor          | super + F4                     |
 | Mail client             | super + F5                     |
 | Note-taking app         | super + F6                     |
+| Calendar app            | super + c                      |
+| Music player            | super + m                      |
+| Program Launcher        | super + r                      |
+| Terminal file manager   | super + v                      |
+| **Volume and CMUS external control**			   |
+| Volume up		  | super + up                     |
+| Volume down		  | super + down                   |
+| Next song		  | super + right                  |
+| Previous song		  | super + left                   |
+| Pause 		  | super + p                      |
 | **Other layouts**                                        |
-| Floating window         | super + control + space        |
+| Toggle floating window  | super + control + space        |
 | Fullscreen              | super + f                      |
 
 ## Installation  

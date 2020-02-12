@@ -8,3 +8,7 @@ fcitx -d
 flameshot &
 # Switch Caps Lock and Escape keys
 setxkbmap -option caps:swapescape
+# Notification daemon
+dunst &
+# Hotkey daemon
+sxhkd &

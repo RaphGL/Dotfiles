@@ -26,7 +26,6 @@ keys = [
     #General Key bindings
     Key([mod], "w", lazy.window.kill()),
     Key([mod, "control"], "0", lazy.shutdown()),
-    Key([mod, "control"], "9", lazy.spawn('betterlockscreen -l')),
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod], "Tab", lazy.next_layout()),
 
@@ -47,28 +46,6 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.shuffle_up()),
     Key([mod, "control"], "h", lazy.layout.swap_left()),
     Key([mod, "control"], "l", lazy.layout.swap_right()),
-
-    #Volume control
-    Key([mod], "Up", lazy.spawn("pactl set-sink-volume 0 +5%")),
-    Key([mod], "Down", lazy.spawn("pactl set-sink-volume 0 -5%")),
-
-    # Music control
-    Key([mod], "Left", lazy.spawn("cmus-remote -r")),
-    Key([mod], "Right", lazy.spawn("cmus-remote -n")),
-    Key([mod], "p", lazy.spawn("cmus-remote -u")),
-
-    #Personal Key bindings for programs
-    Key([mod], "v", lazy.spawn("urxvt -e ranger")),
-    Key([mod], "c", lazy.spawn("urxvt -e calcurse")),
-    Key([mod], "m", lazy.spawn("urxvt -e cmus")),
-    Key([mod], "r", lazy.spawn("rofi -show run")),
-    Key([mod], "Return", lazy.spawn("urxvt")),
-    Key([mod], "F1", lazy.spawn("thunar")),
-    Key([mod], "F2", lazy.spawn("firefox")),
-    Key([mod], "F3", lazy.spawn("code")),
-    Key([mod], "F4", lazy.spawn("urxvt -e htop")),
-    Key([mod], "F5", lazy.spawn("thunderbird")),
-    Key([mod], "F6", lazy.spawn("joplin-desktop")),
 
    # Toggle between different layouts
    Key([mod, "control"], "space", lazy.window.toggle_floating()),
