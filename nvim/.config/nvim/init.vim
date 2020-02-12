@@ -1,9 +1,8 @@
 call plug#begin()
-	Plug 'neomake/neomake'
 	Plug 'vim-airline/vim-airline'
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'jiangmiao/auto-pairs'
-  Plug 'sheerun/vim-polyglot'
+ 	Plug 'sheerun/vim-polyglot'
 	"Nerdtree
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -12,7 +11,7 @@ call plug#begin()
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'christoomey/vim-tmux-navigator'
 	"Fuzzy finder
-  Plug 'airblade/vim-gitgutter'
+  	Plug 'airblade/vim-gitgutter'
 
 	if has('nvim')
   	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -34,7 +33,6 @@ call plug#end()
 
 "Initialize plugins""
 let g:deoplete#enable_at_startup = 1
-let g:neomake_open_list = 2
 colorscheme dracula
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE

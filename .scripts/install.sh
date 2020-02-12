@@ -27,6 +27,7 @@ mv -t .temp *.png *.md
 stow --adopt *
 mv .temp/* $HOME/dotfiles/
 rmdir .temp/
+feh --bg-fill ${HOME}/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper2.jpg
 echo -e "${BLUE}done${NC}"
 
 # Changing default shell

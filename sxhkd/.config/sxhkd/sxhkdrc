@@ -4,15 +4,15 @@ super + control + 9
 
 # Keybindings for programs
 super + v
-	urxvt -e ranger
+	kitty ranger
 super + c
-	urxvt -e calcurse
+	kitty calcurse
 super + m
-	urxvt -e cmus
+	kitty cmus
 super + r
 	rofi -show run
 super + Return
-	urxvt
+	kitty
 super + F1
 	thunar
 super + F2
@@ -20,7 +20,7 @@ super + F2
 super + F3
 	code
 super + F4
-	urxvt -e htop
+	kitty htop
 super + F5
 	thunderbird
 super + F6

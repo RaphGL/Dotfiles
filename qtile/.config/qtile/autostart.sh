@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Visual candy
-nitrogen --restore &
+feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper2.jpg
 picom -b
 # Keyboard layout 
 fcitx -d
