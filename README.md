@@ -1,6 +1,6 @@
 # Raph's Dotfiles  
 
-This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/) could be used to quickly set everything up.
+This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/) could be used to quickly set everything up.  
 
 ## Screenshots  
 
@@ -13,7 +13,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 - **Terminal**: Kitty  
 - **Application launcher**: Rofi  
 - **Wallpaper setter**: Feh  
-- **Wallpapers**: [here](./background/Pictures)
+- **Wallpapers**: [here](./wallpapers/Pictures/Wallpapers/)  
 - **Text Editors**: NeoVim & VSCode  
 - **Keybindings daemon**: sxhkd  
 
