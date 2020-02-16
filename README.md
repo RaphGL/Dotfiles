@@ -15,6 +15,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 - **Wallpaper setter**: Feh  
 - **Wallpapers**: [here](./background/Pictures)
 - **Text Editors**: NeoVim & VSCode  
+- **Keybindings daemon**: sxhkd  
 
 ## Keybindings  
 
@@ -66,15 +67,16 @@ $ sudo ./dotfiles/.scripts/pacin.sh # Installs dependencies and programs I use f
 $ ./dotfiles/.scripts/aurpacs.sh # Installs aur packages I use
 ```  
 
-If you want japanese on the terminal you should install this [font](https://github.com/adobe-fonts/source-han-code-jp/releases/).
-
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  
 ```sh
-$ cd ~/dotfiles && rm *.md *.png && stow --adopt * # If you don't remove them your dotfiles will be used instead
+$ cd ~/dotfiles && rm *.md *.png && stow --adopt *
 ```  
+If you don't remove your dotfiles that collide with the repo's then your dotfiles will be used instead, if it doesn't exist then mine will be used instead. For more information read Stow's man page.  
+
 Note:  
 You will probably want to edit Qtile's config file and install the following if you intend to use my Zsh and Vim configurations:  
 - [Oh my Zsh!](https://ohmyz.sh/)  
 - [Zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)  
+Make sure to clone both *Oh my Zsh!* and *Zsh-syntax-highlighting* to the ~/zsh-plugins directory or source them yourself  
 - [Vim-plug](https://github.com/junegunn/vim-plug)  

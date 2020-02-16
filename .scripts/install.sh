@@ -3,7 +3,7 @@ cd $HOME
 RED='\033[0;31m'
 BLUE='\033[0;31m'
 NC='\033[0m' # No Color
-$1 = 
+
 # Installing Vim-Plug
 echo -e "${BLUE}Installing Vim-Plug...${NC}"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
