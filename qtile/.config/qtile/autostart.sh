@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Visual candy
-feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper2.jpg
+feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper4.jpg
 picom -b
 # Keyboard layout 
 fcitx -d
