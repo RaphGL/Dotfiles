@@ -2,6 +2,10 @@
 super + control + 9
 	betterlockscreen -l
 
+# Kill window
+super + x
+	xdotool selectwindow windowkill
+
 # Keybindings for programs
 super + v
 	kitty ranger
