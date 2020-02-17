@@ -51,5 +51,9 @@ super + Left
 	cmus-remote -r
 super + Right
 	cmus-remote -n
+super + control + Left
+	cmus-remote -C "seek -5"
+super + control + Right
+	cmus-remote -C "seek +5"
 super + p
 	cmus-remote -u
