@@ -7,6 +7,7 @@ alias yta="youtube-dl -f bestaudio"
 alias nvimc="$EDITOR ~/.config/nvim/init.vim"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
+alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
 alias gcc99="gcc -std=c99"
 
 ZSH_THEME="gentoo"

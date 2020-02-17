@@ -1,3 +1,4 @@
+PATH=$PATH:$HOME/dotfiles/.scripts/
 # Defaults
 export EDITOR="nvim"
 export VISUAL="nvim"
