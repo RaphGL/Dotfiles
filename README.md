@@ -6,6 +6,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 
 ![screenshot1](screenshot1.png)  
 ![screenshot2](screenshot2.png)  
+![screenshot3](screenshot3.png)  
 
 ## Details  
 
