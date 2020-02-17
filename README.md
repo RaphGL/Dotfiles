@@ -1,6 +1,7 @@
 # Raph's Dotfiles  
 
 This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/) could be used to quickly set everything up.  
+*Reminder: I'm currently using the picom-tryone-git version with experimental backends, make sure to change it back to picom later on.*
 
 ## Screenshots  
 

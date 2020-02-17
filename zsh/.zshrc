@@ -1,14 +1,17 @@
 export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
 
 ### Aliases ###
+alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
+alias gcc99="gcc -std=c99"
+alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
+alias la="ls -lah"
+alias ll="ls -lh"
+alias ls="ls --color=tty"
+alias nvimc="$EDITOR ~/.config/nvim/init.vim"
+alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias v="nvim"
 alias yt="youtube-dl"
 alias yta="youtube-dl -f bestaudio"
-alias nvimc="$EDITOR ~/.config/nvim/init.vim"
-alias qtilec="$EDITOR ~/.config/qtile/config.py"
-alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
-alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
-alias gcc99="gcc -std=c99"
 
 ZSH_THEME="gentoo"
 export UPDATE_ZSH_DAYS=5
