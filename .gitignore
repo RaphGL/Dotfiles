@@ -1,7 +1,7 @@
 __pycache__/
 log.txt
-nvim/.config/nvim/pluggled/*
+nvim/.config/nvim/plugged/
 calcurse/.calcurse/*
-!calcurse/.calculse/conf
+!calcurse/.calcurse/conf
 vscode/.config/Code\ -\ OSS/*
 !vscode/.config/Code\ -\ OSS/User/settings.json
