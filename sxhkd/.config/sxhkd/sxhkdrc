@@ -1,59 +1,79 @@
-# Screenlocker
+### Screenlocker ###
 super + control + 9
 	betterlockscreen -l
 
-# Kill window
+### Kill window ###
 super + x
 	xdotool selectwindow windowkill
 
-# Keybindings for programs
+### Keybindings for programs ###
+# Launch terminal file manager
 super + v
 	kitty ranger
+# Launch calendar app
 super + c
 	kitty calcurse
+# Launch music player
 super + m
 	kitty cmus
+# Launch network manager
 super + n
 	kitty nmtui
+# Launch application launcher
 super + r
 	rofi -show run
+# Launch terminal
 super + Return
 	kitty
+# Launch gui file manager
 super + F1
 	nemo
+# Launch web browser
 super + F2
 	firefox
+# Launch code editor
 super + F3
 	code
+# Launch system monitor
 super + F4
 	kitty htop
+# Launch mail client
 super + F5
 	thunderbird
+# Launch note-taking app
 super + F6
 	joplin-desktop
 
-# Screenshot
+### Screenshot ###
+# Take a full screenshot and copy to clipboard
 Print
 	flameshot full -c
-shift + Print
-	flameshot gui
+# Take a full screenshot and save to to Pictures/
 control + Print
 	flameshot full -p ~/Pictures
+# Select an area and take a screenshot
+shift + Print
+	flameshot gui
 
-# Volume Control
+### Volume Control ###
 super + Up
 	pactl set-sink-volume 0 +5%
 super + Down
 	pactl set-sink-volume 0 -5%
 
-# Music Control
+### Music Control ###
+# Previous song
 super + Left
 	cmus-remote -r
+# Next song
 super + Right
 	cmus-remote -n
+# Rewind song
 super + control + Left
 	cmus-remote -C "seek -5"
+# Forward song
 super + control + Right
 	cmus-remote -C "seek +5"
+# Pause
 super + p
 	cmus-remote -u
