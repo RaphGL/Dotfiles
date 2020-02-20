@@ -23,7 +23,7 @@ then
 fi
 cd $HOME/dotfiles
 mkdir -p .temp/
-mv -t .temp *.png *.md
+mv -t .temp *.png *.md LICENSE
 stow --adopt *
 mv .temp/* $HOME/dotfiles/
 rmdir .temp/
