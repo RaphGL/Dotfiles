@@ -70,10 +70,10 @@ super + Right
 	cmus-remote -n
 # Rewind song
 super + control + Left
-	cmus-remote -C "seek -5"
+	cmus-remote -C "seek -2"
 # Forward song
 super + control + Right
-	cmus-remote -C "seek +5"
+	cmus-remote -C "seek +2"
 # Pause
 super + p
 	cmus-remote -u
