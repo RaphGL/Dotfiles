@@ -20,7 +20,7 @@ super + r
 super + Return
 	kitty
 super + F1
-	thunar
+	nemo
 super + F2
 	firefox
 super + F3

@@ -1,0 +1,17 @@
+{
+    "editor.suggestSelection": "first",
+    "editor.fontFamily": "'Noto Mono', 'Noto Mono', monospace, 'Droid Sans Fallback'",
+    "editor.lineNumbers": "relative",
+    "python.jediEnabled": false,
+    "keyboard.dispatch": "keyCode",
+    "window.zoomLevel": 1,
+    "workbench.sideBar.location": "left",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "vim.vimrc.path": "${HOME}/.vimrc",
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.enableNeovim": true,
+    "workbench.colorTheme": "Dracula",
+}

@@ -9,14 +9,6 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 
-" Import Vim extensions"
-call plug#begin('~/.vim/plugged')
-	Plug 'valloric/youcompleteme'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'scrooloose/syntastic'
-	Plug 'lervag/vimtex'
-call plug#end()
-
 "General"
 set number	" Show line numbers"
 set relativenumber
