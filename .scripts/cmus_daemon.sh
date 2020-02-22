@@ -10,7 +10,7 @@ do
 	pgrep cmus
 	if [ $? -eq 0 ]
 	then
-		# Checks whether its the same music playing
+		# Checks whether its the same song playing
 		PLAYING=<(get_status)
 		sleep 1
 		PLAYING_2=<(get_status)
@@ -23,7 +23,7 @@ do
 			echo $SONG | grep "set aaa_mode artist"
 			if [ $? -ne 0 ] && [ "$SONG" != "" ]
 			then
-				notify-send "Now playing" "$SONG" -t 5000
+				notify-send -u low -t 5000 "Now playing" "$SONG"
 			fi
 		fi
 	fi

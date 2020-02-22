@@ -3,8 +3,13 @@ super + control + 9
 	betterlockscreen -l
 
 ### Kill window ###
-super + x
-	xdotool selectwindow windowkill
+super + control + x
+	xdotool getwindowfocus windowkill
+
+# Restart hotkey daemon
+super + q
+	killall -SIGUSR1 sxhkd && \
+	notify-send -t 1500 "sxhkd" "config reloaded"
 
 ### Keybindings for programs ###
 # Launch terminal file manager
@@ -56,24 +61,16 @@ shift + Print
 	flameshot gui
 
 ### Volume Control ###
-super + Up
-	pactl set-sink-volume 0 +5%
-super + Down
-	pactl set-sink-volume 0 -5%
+super + {Up, Down}
+	pactl set-sink-volume {0 +5%, 0 -5%}
 
 ### Music Control ###
-# Previous song
-super + Left
-	cmus-remote -r
-# Next song
-super + Right
-	cmus-remote -n
-# Rewind song
-super + control + Left
-	cmus-remote -C "seek -2"
-# Forward song
-super + control + Right
-	cmus-remote -C "seek +2"
+# Previous and next song
+super + {Left, Right}
+	cmus-remote {--prev, --next}
+# Rewind and forward song
+super + control + {Left, Right}
+	cmus-remote -C {"seek -2", "seek +2"}
 # Pause
 super + p
 	cmus-remote -u

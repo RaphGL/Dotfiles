@@ -20,6 +20,7 @@ call plug#end()
 colorscheme dracula
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
+set mouse=a
 
 " Relative numbers "
 :set number relativenumber

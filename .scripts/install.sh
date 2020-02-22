@@ -1,34 +1,83 @@
 #!/bin/bash
 cd $HOME
 RED='\033[0;31m'
-BLUE='\033[0;31m'
+BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Installing Vim-Plug
-echo -e "${BLUE}Installing Vim-Plug...${NC}"
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+setup_dotfiles()
+{
+	echo -ne "${BLUE} Setting up dotfiles...${NC}"
+	# Installing Vim-Plug
+	echo -e "${BLUE}Installing Vim-Plug...${NC}"
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#Installing "Oh-My-Zsh!" and Syntax Highlighting
-echo -e "${BLUE}Setting up Zsh...${NC}"
-mkdir -p ~/.zsh-plugins
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.zsh-plugins/.oh-my-zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
+	#Installing "Oh-My-Zsh!" and Syntax Highlighting
+	echo -e "${BLUE}Setting up Zsh...${NC}"
+	mkdir -p ~/.zsh-plugins
+	git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.zsh-plugins/.oh-my-zsh
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
 
-# Installing dotfiles
-echo -ne "${BLUE} Setting up dotfiles...${NC}"
-if [ ${1:-"first_time"} ]
-then 
-	rm -rf .bashrc .vimrc .Xresources .zshenv .zshrc .config/rofi/config.rasi .config/mimeapps.list .config/nvim/init.vim
-fi
-cd $HOME/dotfiles
-mkdir -p .temp/
-mv -t .temp *.png *.md LICENSE
-stow --adopt *
-mv .temp/* $HOME/dotfiles/
-rmdir .temp/
-feh --bg-fill ${HOME}/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper2.jpg
-echo -e "${BLUE}done${NC}"
+	cd $HOME/dotfiles
+	mkdir -p .temp/
+	mv -t .temp *.png *.md LICENSE
+	stow --adopt *
+	mv .temp/* $HOME/dotfiles/
+	rmdir .temp/
+	feh --bg-fill ${HOME}/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper2.jpg
+	echo -e "${BLUE}done${NC}"
+	cd $HOME
+}
 
-# Changing default shell
-chsh -s $(which zsh)
+switch_shell()
+{
+	# Changing default shell
+	read -p "${BLUE}Do you want to switch to Zsh?(Y/n)${NC}" SHELL_CONFIRM
+	case $SHELL_CONFIRM in
+		y|Y|yes)
+			chsh -s $(which zsh)
+			;;
+		n|N|no)
+			exit
+			;;
+		*)
+			chsh -s $(which zsh)
+			;;
+	esac
+}
+
+for i in $@
+do
+	case $i in
+		-f|--first-time)
+			rm -rf .bashrc .vimrc .Xresources .zshenv .zshrc .config/rofi/config.rasi \
+				.config/mimeapps.list .config/nvim/init.vim
+			setup_dotfiles
+			switch_shell
+			;;
+		-a|--all)
+			find dotfiles/* | sed -n "s/dotfiles\/\w*\///; /Pictures/d; /.*plugged.*/d; p" | xargs rm
+			git clone https://github.com/raphgl/dotfiles
+			setup_dotfiles
+			switch_shell
+			;;
+		-h|--help)
+			echo "\
+usage:
+stowit [option]
+
+A script to quickly setup dotfiles using stow 
+
+optional arguments:
+  -h, --help        show this help message and exit
+  -a, --all  	    delete all files in the dotfiles folder and download from repository
+  -f, --first-time  delete default configuration and setup dotfiles
+			"
+			exit 0
+			;;
+		*)
+			echo -e "${RED}No flag was provided${NC}"
+			exit 1
+			;;
+	esac
+done

@@ -12,6 +12,7 @@ alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias v="nvim"
 alias yt="youtube-dl"
 alias yta="youtube-dl -f bestaudio"
+alias diff="diff --color=always"
 
 ZSH_THEME="gentoo"
 export UPDATE_ZSH_DAYS=5
