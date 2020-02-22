@@ -24,7 +24,8 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 |          Action         | Shortcut                       |
 |:-----------------------:|--------------------------------|
 | **General Keybindings**                                  |
-| Kill window             | super + w                      |
+| Close window            | super + w                      |
+| Kill window             | super + k                      |
 | Kill Qtile              | super + control + 0            |
 | Lock screen             | super + control + 9            |
 | Restart Qtile           | super + control + r            |
@@ -61,7 +62,7 @@ Note: The script only works with arch-based distros.
 
 After cloning the repository run:  
 ```sh
-$ ./dotfiles/.scripts/install.sh # Functional but there are still side effects if run more than once
+$ ./dotfiles/.scripts/stowit -f
 ```   
 To install the packages needed and that I use, run:
 ```sh
@@ -72,7 +73,7 @@ $ ./dotfiles/.scripts/aurpacs.sh # Installs aur packages I use
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  
 ```sh
-$ cd ~/dotfiles && rm *.md *.png && stow --adopt *
+$ cd ~/dotfiles && rm *.md *.png LICENSE && stow --adopt *
 ```  
 If you don't remove your dotfiles that collide with the repo's then your dotfiles will be used instead, if it doesn't exist then mine will be used instead. For more information read Stow's man page.  
 
