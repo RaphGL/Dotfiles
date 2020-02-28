@@ -4,7 +4,7 @@
     "editor.lineNumbers": "relative",
     "python.jediEnabled": false,
     "keyboard.dispatch": "keyCode",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "workbench.sideBar.location": "left",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
