@@ -62,7 +62,7 @@ shift + Print
 
 ### Volume Control ###
 super + {Up, Down}
-	pactl set-sink-volume {0 +5%, 0 -5%}
+	pamixer {-i 2, -d 2}
 
 ### Music Control ###
 # Previous and next song
