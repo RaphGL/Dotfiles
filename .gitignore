@@ -8,5 +8,5 @@ vscode/.config/Code\ -\ OSS/*
 fcitx/
 !fcitx/.config/fcitx/config
 !fcitx/.config/fcitx/profile
-cmus/
+cmus/*
 !cmus/.config/cmus/autosave
