@@ -5,3 +5,8 @@ calcurse/.calcurse/*
 !calcurse/.calcurse/conf
 vscode/.config/Code\ -\ OSS/*
 !vscode/.config/Code\ -\ OSS/User/settings.json
+fcitx/
+!fcitx/.config/fcitx/config
+!fcitx/.config/fcitx/profile
+cmus/
+!cmus/.config/cmus/autosave
