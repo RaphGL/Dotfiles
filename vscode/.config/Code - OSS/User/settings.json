@@ -1,6 +1,6 @@
 {
     "editor.suggestSelection": "first",
-    "editor.fontFamily": "'Noto Mono', 'Noto Mono', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Source Code Pro', 'Noto Sans'",
     "editor.lineNumbers": "relative",
     "python.jediEnabled": false,
     "keyboard.dispatch": "keyCode",
