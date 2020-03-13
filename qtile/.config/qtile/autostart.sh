@@ -13,6 +13,5 @@ setxkbmap -option caps:swapescape
 dunst &
 # Hotkey daemon
 sxhkd &
-
 # Custom scripts
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &

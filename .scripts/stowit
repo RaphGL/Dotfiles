@@ -32,7 +32,8 @@ setup_dotfiles()
 switch_shell()
 {
 	# Changing default shell
-	read -p "${BLUE}Do you want to switch to Zsh?(Y/n)${NC}" SHELL_CONFIRM
+	echo -e "Do you want to switch to Zsh?(Y/n)"
+	read -p SHELL_CONFIRM
 	case $SHELL_CONFIRM in
 		y|Y|yes)
 			chsh -s $(which zsh)
