@@ -1,3 +1,43 @@
+### BSPWM config ###
+# Close window
+super + w
+	bspc node -c
+
+# Leave bspwm
+super + control + 0
+	killall bspwm
+
+# Change window in focus
+super + {h, j, k, l}
+	bspc node -f {west, south, north, east}
+
+# Move window
+super + control + {h, j, k, l}
+	bspc node -s {west, south, north, east} --follow
+
+# Change to desktop x
+super + {1-8}
+	bspc desktop -f ^{1-8}
+
+# Move x to desktop y
+super + shift + {1-8}
+	bspc node -d ^{1-8}
+
+# Resize window
+super + {y, u, i, o}
+	bspc node -z {left -10 0, bottom 0 10, top 0 -10, right 10 0}
+	
+# Balance window ratios
+super + y
+	bspc node -B
+
+# Make window fullscreen
+super + Tab
+	bspc node -t "~fullscreen"
+# Make window float
+super + alt + Space
+	bspc node -t "~floating"
+
 ### Screenlocker ###
 super + control + 9
 	betterlockscreen -l
