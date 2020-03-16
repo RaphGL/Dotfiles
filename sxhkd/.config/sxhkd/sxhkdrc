@@ -8,8 +8,12 @@ super + control + 0
 	bspc quit
 
 # Change window in focus
-super + {h, j, k, l}
-	bspc node -f {west, south, north, east}
+super + {h, l}
+	bspc node -f {west, east}
+
+# Focus the next/previous node in the current desktop
+super + {j, k}
+	bspc node -f {next,prev}.local
 
 # Move window
 super + control + {h, j, k, l}
@@ -31,12 +35,17 @@ super + {y, u, i, o}
 super + y
 	bspc node -B
 
-# Make window fullscreen
+# Toggle monocle layout
 super + Tab
-	bspc node -t "~fullscreen"
-# Make window float
-super + alt + Space
+	bspc desktop -l next
+
+# Toggle floating window
+super + control + space
 	bspc node -t "~floating"
+
+# Make focused window fullscreen
+super + f
+	bspc node -t "~fullscreen"
 
 ### Screenlocker ###
 super + control + 9
