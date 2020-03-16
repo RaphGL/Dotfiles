@@ -5,7 +5,7 @@ super + w
 
 # Leave bspwm
 super + control + 0
-	killall bspwm
+	bspc quit
 
 # Change window in focus
 super + {h, j, k, l}
