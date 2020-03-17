@@ -6,7 +6,7 @@ pacman --needed -S \
 	kdenlive kitty libnotify libreoffice-still lxappearance mpv nemo neofetch neovim \
 	npm obs-studio pamixer pass picom pulseaudio pulseaudio-alsa python-pip qtile ranger \
 	rofi stow surf sxhkd sxiv telegram-desktop thunderbird tldr w3m xclip xdotool xorg-xdpyinfo \
-	xorg-xrandr youtube-dl zathura zathura-pdf-mupdf zsh
+	xorg-xrandr youtube-dl zathura zathura-pdf-mupdf zsh bspwm
 	
 pip install pynvim
 npm install -g neovim
