@@ -63,22 +63,22 @@ super + q
 ### Keybindings for programs ###
 # Launch terminal file manager
 super + v
-	kitty ranger
+	alacritty -e ranger
 # Launch calendar app
 super + c
-	kitty calcurse
+	alacritty -e calcurse
 # Launch music player
 super + m
-	kitty cmus
+	alacritty -e cmus
 # Launch network manager
 super + n
-	kitty nmtui
+	alacritty -e nmtui
 # Launch application launcher
 super + r
 	rofi -show run
 # Launch terminal
 super + Return
-	kitty
+	alacritty
 # Launch gui file manager
 super + F1
 	nemo
