@@ -8,6 +8,6 @@ pacman --needed -S \
 	rofi stow surf sxhkd sxiv telegram-desktop thunderbird tldr w3m xclip xdotool xorg-xdpyinfo \
 	xorg-xrandr youtube-dl zathura zathura-pdf-mupdf zsh bspwm ttf-ubuntu-font-family
 	
-pip install pynvim
+pip install pynvim msgpack-python jedi
 npm install -g neovim
-./~/dotfiles/.scripts/vscode_extin.sh
+sh -c ~/dotfiles/.scripts/vscode_extin.sh

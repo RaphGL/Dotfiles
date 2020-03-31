@@ -3,21 +3,20 @@ call plug#begin()
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'jiangmiao/auto-pairs'
  	Plug 'sheerun/vim-polyglot'
-	"Nerdtree
+	"nerdtree
 	Plug 'scrooloose/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	"Conquer of Completion
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'christoomey/vim-tmux-navigator'
-	"Fuzzy finder
+	"fuzzy finder
   	Plug 'airblade/vim-gitgutter'
-	" Code Completion
+	" code completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'ap/vim-css-color'
 call plug#end()
 
-"Initialize plugins""
+"initialize plugins""
 colorscheme dracula
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
