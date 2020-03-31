@@ -90,7 +90,7 @@ super + F3
 	code
 # Launch system monitor
 super + F4
-	kitty htop
+	alacritty -e htop
 # Launch mail client
 super + F5
 	thunderbird
