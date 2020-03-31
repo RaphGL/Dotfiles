@@ -14,6 +14,7 @@ call plug#begin()
   	Plug 'airblade/vim-gitgutter'
 	" Code Completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'ap/vim-css-color'
 call plug#end()
 
 "Initialize plugins""
