@@ -45,7 +45,7 @@ wm-restack = bspwm
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:55:...%
 
 [module/wlan]
 type = internal/network
@@ -205,7 +205,7 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = " %a - %b %d, %Y"
 
 time = %H:%M
 time-alt = %H:%M:%S
