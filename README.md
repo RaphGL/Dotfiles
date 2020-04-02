@@ -1,7 +1,6 @@
 # Raph's Dotfiles  
 
 This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/) could be used to quickly set everything up.  
-*Reminder: I'm currently using the picom-tryone-git version with experimental backends, make sure to change it back to picom later on.*
 
 ## Screenshots  
 
@@ -11,8 +10,8 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 
 ## Details  
 
-- **WM**: [Qtile](http://www.qtile.org/)  
-- **Terminal**: Kitty  
+- **WM**: [Qtile](http://www.qtile.org/) and [BSPWM](https://github.com/baskerville/bspwm)
+- **Terminal**: Alacritty  
 - **Application launcher**: Rofi  
 - **Wallpaper setter**: Feh  
 - **Wallpapers**: [here](./wallpapers/Pictures/Wallpapers/)  
@@ -25,16 +24,15 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 |:-----------------------:|--------------------------------|
 | **General Keybindings**                                  |
 | Close window            | super + w                      |
-| Kill window             | super + k                      |
-| Kill Qtile              | super + control + 0            |
+| Kill window             | super control + x              |
+| Logout                  | super + control + 0            |
 | Lock screen             | super + control + 9            |
 | Restart Qtile           | super + control + r            |
 | Switch layout           | super + tab                    |
-| Volume control          | super + arrow keys             |
 | **Moving around**                                        |
-| Move between windows    | super + [h, j, k, l]           |
-| Change window size      | super + [y, u, i, o]           |
-| Move windows around     | super + control + [h, j, k, l] |
+| Move between windows    | super + {h, j, k, l}           |
+| Change window size      | super + {y, u, i, o}           |
+| Move windows around     | super + control + {h, j, k, l} |
 | **Programs**                                             |
 | Terminal                | super + return                 |
 | File Manager            | super + F1                     |
@@ -58,24 +56,35 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Fullscreen              | super + f                      |
 
 ## Installation  
-Note: The script only works with arch-based distros.   
-
-After cloning the repository run:  
+To set all the dotfiles make sure you have stow installed and then run:  
 ```sh
 $ ./dotfiles/.scripts/stowit -f
 ```   
-To install the packages needed and that I use, run:
+
+After setting everything up you will probably want to install the programs necessary to run my specific rice.  
+**For a complete install:**  
 ```sh
 $ sudo ./dotfiles/.scripts/pacin.sh # Installs dependencies and programs I use frequently
-$ ./dotfiles/.scripts/aurpacs.sh # Installs aur packages I use
+$ ./dotfiles/.scripts/aurpacs.sh # Installs AUR packages I use
 ```  
+The complete install installs code editors, a web browser, an image viewer, a file manager and other programs.  
+
+**For a minimal install:**  
+```sh
+$ sudo pacman -S --needed < $HOME/dotfiles/.scripts/lists/base_packages.list
+```  
+The minimal install installs only the bare minimum to get you up and running, you will have to install most programs yourself.  
+After installing them you will probably want to setup keybindings for them, to do so you can edit the keybinding daemon's configuration located at *$HOME/.config/sxhkd/sxhkdrc or simply run:  
+```sh
+$ kb
+```
 
 ### Manual installation  
 Remove colliding dotfiles between the repo and your home folder and run:  
 ```sh
 $ cd ~/dotfiles && rm *.md *.png LICENSE && stow --adopt *
 ```  
-If you don't remove your dotfiles that collide with the repo's then your dotfiles will be used instead, if it doesn't exist then mine will be used instead. For more information read Stow's man page.  
+If you don't remove the dotfiles that collide with the repo's then your dotfiles will be used instead, if they doesn't exist then mine will be used instead. For more information read Stow's man page.  
 
 Note:  
 You will probably want to edit Qtile's config file and install the following if you intend to use my Zsh and Vim configurations:  
