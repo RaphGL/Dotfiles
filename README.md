@@ -90,5 +90,5 @@ Note:
 You will probably want to edit Qtile's config file and install the following if you intend to use my Zsh and Vim configurations:  
 - [Oh my Zsh!](https://ohmyz.sh/)  
 - [Zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)  
-Make sure to clone both *Oh my Zsh!* and *Zsh-syntax-highlighting* to the ~/zsh-plugins directory or source them yourself  
+Make sure to clone both *Oh my Zsh!* and *Zsh-syntax-highlighting* to the ~/.zsh-plugins directory or source them yourself  
 - [Vim-plug](https://github.com/junegunn/vim-plug)  

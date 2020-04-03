@@ -7,7 +7,7 @@ pacman --needed -S \
 	anki calcurse cmus code firefox flameshot gimp gnome-font-viewer gscan2pdf htop hub imagemagick \
 	kdenlive alacritty libreoffice-still lxappearance mpv nemo neofetch neovim simplescreenrecorder \
 	pass picom ranger rofi surf sxiv telegram-desktop thunderbird tldr w3m youtube-dl zathura \
-	zathura-pdf-mupdf zsh \
+	zathura-pdf-mupdf zsh clang \
 	fcitx fcitx-im fcitx-mozc \
 
 pip install pynvim msgpack-python jedi

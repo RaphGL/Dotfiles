@@ -1,9 +1,13 @@
+adapta-gtk-theme
 adobe-source-code-pro-fonts
 adobe-source-han-sans-jp-fonts
+alacritty
 alsa-utils
 anki
 base-devel
+bspwm
 calcurse
+clang
 cmake
 cmus
 code
@@ -13,7 +17,6 @@ fcitx
 fcitx-im
 fcitx-mozc
 feh
-adapta-gtk-theme
 firefox
 flameshot
 gimp
@@ -24,7 +27,6 @@ htop
 hub
 imagemagick
 kdenlive
-alacritty
 libnotify
 libreoffice-still
 lxappearance
@@ -33,7 +35,6 @@ nemo
 neofetch
 neovim
 npm
-simplescreenrecorder
 pamixer
 pass
 picom
@@ -43,6 +44,7 @@ python-pip
 qtile
 ranger
 rofi
+simplescreenrecorder
 stow
 surf
 sxhkd
@@ -50,6 +52,7 @@ sxiv
 telegram-desktop
 thunderbird
 tldr
+ttf-ubuntu-font-family
 w3m
 xclip
 xdotool
@@ -59,5 +62,3 @@ youtube-dl
 zathura
 zathura-pdf-mupdf
 zsh
-bspwm
-ttf-ubuntu-font-family

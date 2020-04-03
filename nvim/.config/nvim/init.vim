@@ -3,17 +3,17 @@ call plug#begin()
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'jiangmiao/auto-pairs'
  	Plug 'sheerun/vim-polyglot'
+	Plug 'ctrlpvim/ctrlp.vim'
 	"nerdtree
 	Plug 'scrooloose/nerdtree'
 	Plug 'xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'christoomey/vim-tmux-navigator'
-	"fuzzy finder
   	Plug 'airblade/vim-gitgutter'
+	Plug 'ap/vim-css-color'
 	" code completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'ap/vim-css-color'
 call plug#end()
 
 "initialize plugins""
@@ -58,13 +58,14 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-tsserver',
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-prettier',
   \ 'coc-json',
+  \ 'coc-tsserver',
   \ 'coc-texlab',
   \ 'coc-python',
+  \ 'coc-clangd',
   \ ]
 
 " From Coc Readme
