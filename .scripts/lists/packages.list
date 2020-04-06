@@ -19,6 +19,7 @@ fcitx-mozc
 feh
 firefox
 flameshot
+fzf
 gimp
 git
 gnome-font-viewer
@@ -46,7 +47,6 @@ ranger
 rofi
 simplescreenrecorder
 stow
-surf
 sxhkd
 sxiv
 telegram-desktop

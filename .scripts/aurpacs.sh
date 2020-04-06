@@ -1,2 +1,2 @@
-yay -S betterlockscreen-git python-ueberzug-git polybar joplin
+yay -S betterlockscreen-git python-ueberzug polybar
 betterlockscreen -u ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper2.jpg

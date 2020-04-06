@@ -1,8 +1,11 @@
 call plug#begin()
+	" Aesthetics
 	Plug 'vim-airline/vim-airline'
 	Plug 'dracula/vim', { 'as': 'dracula' }
-	Plug 'jiangmiao/auto-pairs'
  	Plug 'sheerun/vim-polyglot'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'ap/vim-css-color'
+	" Fuzzy finder
 	Plug 'ctrlpvim/ctrlp.vim'
 	"nerdtree
 	Plug 'scrooloose/nerdtree'
@@ -11,7 +14,6 @@ call plug#begin()
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'christoomey/vim-tmux-navigator'
   	Plug 'airblade/vim-gitgutter'
-	Plug 'ap/vim-css-color'
 	" code completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
