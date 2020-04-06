@@ -1,3 +1,0 @@
-#!/bin/sh
-DIR=$(find $HOME -maxdepth 4 | fzf)
-cd $DIR

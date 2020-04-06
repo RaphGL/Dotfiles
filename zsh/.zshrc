@@ -81,3 +81,10 @@ zle-line-init() {
     echo -ne "\e[5 q"
 }
 zle -N zle-line-init
+
+# fuzzy find directories
+fuzzycd() {
+	DIR=$(find $HOME -maxdepth 4 -type d | fzf)
+	cd $DIR
+}
+alias fcd="fuzzycd"
