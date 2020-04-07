@@ -30,10 +30,9 @@ super + shift + {1-8}
 # Resize window
 super + {y, u, i, o}
 	bspc node -z {left -10 0, bottom 0 10, top 0 -10, right 10 0}
-	
-# Balance window ratios
-super + y
-	bspc node -B
+
+super + control + {y, u, i, o}
+	bspc node -z {right -10 0, top 0 10,,bottom 0 -10, left 10 0}
 
 # Toggle monocle layout
 super + Tab
@@ -63,34 +62,34 @@ super + q
 ### Keybindings for programs ###
 # Launch terminal file manager
 super + v
-	alacritty -e ranger
+	$TERMINAL -e ranger
 # Launch calendar app
 super + c
-	alacritty -e calcurse
+	$TERMINAL -e calcurse
 # Launch music player
 super + m
-	alacritty -e cmus
+	$TERMINAL -e cmus
 # Launch network manager
 super + n
-	alacritty -e nmtui
+	$TERMINAL -e nmtui
 # Launch application launcher
 super + r
 	rofi -show run
 # Launch terminal
 super + Return
-	alacritty
+	$TERMINAL
 # Launch gui file manager
 super + F1
 	nemo
 # Launch web browser
 super + F2
-	firefox
+	$BROWSER
 # Launch code editor
 super + F3
 	code
 # Launch system monitor
 super + F4
-	alacritty -e htop
+	$TERMINAL -e htop
 # Launch mail client
 super + F5
 	thunderbird
@@ -115,10 +114,10 @@ super + {Up, Down}
 
 ### Music Control ###
 # Previous and next song
-super + {Left, Right}
+super + {comma, period}
 	cmus-remote {--prev, --next}
 # Rewind and forward song
-super + control + {Left, Right}
+super + control + {comma, period}
 	cmus-remote -C {"seek -2", "seek +2"}
 # Pause
 super + p

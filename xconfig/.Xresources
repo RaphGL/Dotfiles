@@ -1,7 +1,7 @@
 ! ------------------------------------------------------------------------------
 ! Dracula Xresources Palette ------------------------------------------------------------------------------
 *.foreground: #F8F8F2
-*.background: #282A36
+*.background: #19191d
 *.color0:     #000000
 *.color8:     #4D4D4D
 *.color1:     #FF5555
@@ -36,13 +36,10 @@ URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
 ! Background Transparency
-URxvt.tintColor: #282A36
 !URxvt*inheritPixmap: true
-URxvt*transparent: true
-URxvt*shading: 110
 ! Fonts
-URxvt*font: xft:Source Code Pro:size=12
-URxvt*boldFont: xft:Source Code Pro:Bold
+URxvt*font: xft:Ubuntu Mono:size=14:style=regular,xft:Source Han Sans JP:size=14
+URxvt*boldFont: xft:Ubuntu Mono:Bold
 
-URxvt*italicFont: xft:Source Code Pro:DemiLight
-URxvt*boldItalicFont: xft:Source Code Pro:Bold
+URxvt*italicFont: xft:Ubuntu Mono:Italic
+URxvt*boldItalicFont: xft:Ubuntu Mono:Bold

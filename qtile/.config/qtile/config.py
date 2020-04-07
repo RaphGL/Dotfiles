@@ -66,8 +66,8 @@ for i in groups:
 
 #My preferred layouts
 layouts = [
-    layout.Max(),
     layout.MonadTall(border_focus=color['active'], border_width=2, margin=8),
+    layout.Max(),
 ]
 
 widget_defaults = dict(
