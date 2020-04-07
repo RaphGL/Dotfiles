@@ -23,7 +23,8 @@ do
 			echo $SONG | grep "set aaa_mode artist"
 			if [ $? -ne 0 ] && [ "$SONG" != "" ]
 			then
-				notify-send -u low -t 5000 "Now playing" "$SONG"
+				dunstify --close=$CUR_SONG
+				CUR_SONG=$(dunstify -u low -t 5000 "Now playing" "$SONG" --printid)
 			fi
 		fi
 	fi
