@@ -1,6 +1,7 @@
 #! /bin/sh
 
 ### Autostart ###
+xsetroot -cursor_name left_ptr &
 sxhkd &
 feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper4.jpg
 picom -b --experimental-backends

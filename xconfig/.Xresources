@@ -38,8 +38,8 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 ! Background Transparency
 !URxvt*inheritPixmap: true
 ! Fonts
-URxvt*font: xft:Ubuntu Mono:size=14:style=regular,xft:Source Han Sans JP:size=14
-URxvt*boldFont: xft:Ubuntu Mono:Bold
+URxvt*font: xft:JetBrains Mono:size=13:style=regular,xft:Source Han Sans JP:size=13
+URxvt*boldFont: xft:JetBrains Mono:Bold
 
-URxvt*italicFont: xft:Ubuntu Mono:Italic
-URxvt*boldItalicFont: xft:Ubuntu Mono:Bold
+URxvt*italicFont: xft:JetBrains Mono:Italic
+URxvt*boldItalicFont: xft:JetBrains Mono:Bold

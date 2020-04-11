@@ -3,6 +3,10 @@
 super + w
 	bspc node -c
 
+# Restart bspwm
+super + control + r
+	bspc wm -r
+
 # Leave bspwm
 super + control + 0
 	bspc quit
@@ -62,16 +66,16 @@ super + q
 ### Keybindings for programs ###
 # Launch terminal file manager
 super + v
-	$TERMINAL -e ranger
+	$TERMINAL ranger
 # Launch calendar app
 super + c
-	$TERMINAL -e calcurse
+	$TERMINAL calcurse
 # Launch music player
 super + m
-	$TERMINAL -e cmus
+	$TERMINAL cmus
 # Launch network manager
 super + n
-	$TERMINAL -e nmtui
+	$TERMINAL nmtui
 # Launch application launcher
 super + r
 	rofi -show run
@@ -89,7 +93,7 @@ super + F3
 	code
 # Launch system monitor
 super + F4
-	$TERMINAL -e htop
+	$TERMINAL htop
 # Launch mail client
 super + F5
 	thunderbird

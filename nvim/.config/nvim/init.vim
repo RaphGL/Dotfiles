@@ -18,15 +18,20 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-"initialize plugins""
 colorscheme dracula
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 set mouse=a
-
-" Relative numbers "
-:set number relativenumber
-:set nu rnu
+set number relativenumber
+set nu rnu
+set expandtab
+set tabstop=4
+set hidden
+" Prevents neovim from backing up files when you quit
+set nobackup
+" Search case sensitivy
+set ignorecase
+set smartcase
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>

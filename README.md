@@ -10,7 +10,7 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 ## Details  
 
 - **WM**: [Qtile](http://www.qtile.org/) and [BSPWM](https://github.com/baskerville/bspwm)
-- **Terminal**: Alacritty  
+- **Terminal**: kitty  
 - **Application launcher**: Rofi  
 - **Wallpaper setter**: Feh  
 - **Wallpapers**: [here](./wallpapers/Pictures/Wallpapers/)  
@@ -26,15 +26,14 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Kill window             | super control + x              |
 | Logout                  | super + control + 0            |
 | Lock screen             | super + control + 9            |
-| Restart Qtile           | super + control + r            |
-| Switch layout           | super + tab                    |
+| Restart window manager  | super + control + r            |
 | **Moving around**                                        |
 | Move between windows    | super + {h, j, k, l}           |
 | Change window size      | super + {y, u, i, o}           |
 | Move windows around     | super + control + {h, j, k, l} |
 | **Programs**                                             |
 | Terminal                | super + return                 |
-| File Manager            | super + F1                     |
+| GUI file Manager        | super + F1                     |
 | Firefox                 | super + F2                     |
 | Visual Studio Code      | super + F3                     |
 | System Monitor          | super + F4                     |
@@ -42,15 +41,18 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 | Note-taking app         | super + F6                     |
 | Calendar app            | super + c                      |
 | Music player            | super + m                      |
-| Program Launcher        | super + r                      |
+| Application Launcher    | super + r                      |
 | Terminal file manager   | super + v                      |
 | **Volume and CMUS external control**			   |
 | Volume up		  | super + up                     |
 | Volume down		  | super + down                   |
-| Next song		  | super + right                  |
-| Previous song		  | super + left                   |
+| Next song		  | super + period                 |
+| Previous song		  | super + comma                  |
+| Forward song		  | super + control + period       |
+| Backward song		  | super + control + comma        |
 | Pause 		  | super + p                      |
-| **Other layouts**                                        |
+| **Layouts**                                              |
+| Toggle monocle layout   | super + tab                    |
 | Toggle floating window  | super + control + space        |
 | Fullscreen              | super + f                      |
 

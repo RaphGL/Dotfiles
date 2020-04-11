@@ -1,6 +1,6 @@
 {
     "editor.suggestSelection": "first",
-    "editor.fontFamily": "'Source Code Pro', 'Noto Sans'",
+    "editor.fontFamily": "'JetBrains Mono', 'Source Code Pro', 'Monospace'",
     "editor.lineNumbers": "relative",
     "python.jediEnabled": false,
     "keyboard.dispatch": "keyCode",
@@ -14,4 +14,5 @@
     "vim.cursorStylePerMode.normal": "block",
     "vim.enableNeovim": true,
     "workbench.colorTheme": "Dracula",
+    "editor.fontLigatures": true,
 }

@@ -1,23 +1,28 @@
 export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
+ZSH_THEME="gentoo"
 
 ### Aliases ###
 alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
+alias diff="diff --color=always"
+alias g="git"
+alias gc="git commit"
 alias gcc99="gcc -std=c99"
+alias grep="grep --color=auto"
+alias gs="git status"
 alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
-alias ls="ls --group-directories-first --color=tty"
 alias la="ls -lah"
 alias ll="ls -lh"
+alias ls="ls --color=auto"
+alias mv="mv -i"
 alias nvimc="$EDITOR ~/.config/nvim/init.vim"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
+alias rm="rm -i"
 alias v="nvim"
 alias yt="youtube-dl"
 alias yta="youtube-dl -f bestaudio"
-alias diff="diff --color=always"
-
-ZSH_THEME="gentoo"
 export UPDATE_ZSH_DAYS=5
-source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
 
 ### vi mode ###
 bindkey -v
