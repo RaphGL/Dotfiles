@@ -71,7 +71,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Source Han Sans JP Medium',
+    font='Ubuntu Regular',
     fontsize=16,
     padding=4,
 )
@@ -81,8 +81,8 @@ screens = [
         top=bar.Bar(
             [
                 #Groups and Window names
-                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0, borderwidth=4),
-                widget.WindowName(fontsize=15),
+                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0),
+                widget.WindowName(),
                 confirm_prompt,
                 # System updates
                 widget.Image(filename='~/.config/qtile/endbright.png'),

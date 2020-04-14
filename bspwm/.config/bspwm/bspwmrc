@@ -1,16 +1,15 @@
 #! /bin/sh
 
 ### Autostart ###
-polybar custom -r &
 xsetroot -cursor_name left_ptr &
 sxhkd &
 feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper4.jpg
 picom -b --experimental-backends
 fcitx -d
 flameshot &
-setxkbmap -option caps:swapescape
 dunst &
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &
+polybar custom -r &
 
 ### Gaps ###
 bspc config top_padding        2

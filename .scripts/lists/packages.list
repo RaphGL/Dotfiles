@@ -1,6 +1,5 @@
 adapta-gtk-theme
 adobe-source-han-sans-jp-fonts
-kitty
 alsa-utils
 anki
 base-devel
@@ -27,6 +26,7 @@ htop
 hub
 imagemagick
 kdenlive
+kitty
 libnotify
 libreoffice-still
 lxappearance
@@ -51,6 +51,7 @@ sxiv
 telegram-desktop
 thunderbird
 tldr
+tmux
 ttf-ubuntu-font-family
 w3m
 xclip

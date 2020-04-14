@@ -7,8 +7,6 @@ picom -b --experimental-backends
 fcitx -d
 # Screenshot program
 flameshot &
-# Swap Caps Lock and Escape keys
-setxkbmap -option caps:swapescape
 # Notification daemon
 dunst &
 # Hotkey daemon

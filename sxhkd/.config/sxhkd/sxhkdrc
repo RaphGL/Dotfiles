@@ -5,7 +5,7 @@ super + w
 
 # Restart bspwm
 super + control + r
-	bspc wm -r
+        bspc wm -r
 
 # Leave bspwm
 super + control + 0

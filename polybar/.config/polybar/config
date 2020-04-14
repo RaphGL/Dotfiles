@@ -30,7 +30,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Source Han Sans:style=semibold:antialias=true:pixelsize=13;1
+font-0 = Ubuntu Regular:style=semibold:antialias=true:pixelsize=13;1
 font-1 = Ubuntu Mono:style=semibold:antialias=true:pixelsize=13;1
 font-2 = Ubuntu Bold:style=semibold:antialias=true:pixelsize=13;1
 
