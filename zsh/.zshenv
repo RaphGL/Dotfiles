@@ -10,11 +10,7 @@ export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
 
-# Input method variables
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
+### Man page syntax highlighting ###
 # Start blinking
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) # green
 # Start bold

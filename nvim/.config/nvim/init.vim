@@ -19,6 +19,7 @@ call plug#begin()
 call plug#end()
 
 colorscheme dracula
+syntax on
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 set mouse=a
@@ -27,11 +28,16 @@ set nu rnu
 set expandtab
 set tabstop=4
 set hidden
+set termguicolors
+set cursorline
 " Prevents neovim from backing up files when you quit
 set nobackup
 " Search case sensitivy
 set ignorecase
 set smartcase
+" Autocompletion
+set wildmode=longest,list,full
+set splitbelow splitright
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>

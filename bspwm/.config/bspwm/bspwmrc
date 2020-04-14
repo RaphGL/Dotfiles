@@ -1,11 +1,11 @@
 #! /bin/sh
 
 ### Autostart ###
+polybar custom -r &
 xsetroot -cursor_name left_ptr &
 sxhkd &
 feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper4.jpg
 picom -b --experimental-backends
-polybar custom -r &
 fcitx -d
 flameshot &
 setxkbmap -option caps:swapescape
