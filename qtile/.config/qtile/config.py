@@ -81,7 +81,7 @@ screens = [
         top=bar.Bar(
             [
                 #Groups and Window names
-                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding=0),
+                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding_x=1),
                 widget.WindowName(),
                 confirm_prompt,
                 # System updates
