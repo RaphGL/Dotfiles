@@ -10,6 +10,6 @@ pacman --needed -S \
 	zathura-pdf-mupdf zsh clang \
 	fcitx fcitx-im fcitx-mozc \
 
-pip install pynvim msgpack-python jedi
+pip install pynvim msgpack-python jedi tuir
 npm install -g neovim
 sh -c ~/dotfiles/.scripts/vscode_extin.sh
