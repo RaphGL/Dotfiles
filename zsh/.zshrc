@@ -21,7 +21,6 @@ alias v="nvim"
 alias yt="youtube-dl"
 alias yta="youtube-dl -f bestaudio"
 export UPDATE_ZSH_DAYS=5
-source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
 ### vi mode ###
@@ -93,3 +92,6 @@ fuzzycd() {
 	cd $DIR
 }
 alias fcd="fuzzycd"
+
+# Syntax highlighting must be sourced in the end of the file
+source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
