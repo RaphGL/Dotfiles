@@ -78,7 +78,7 @@ super + n
 	$TERMINAL nmtui
 # Launch application launcher
 super + r
-	rofi -show run
+	rofi -show-icons -matching glob -show drun
 # Launch terminal
 super + Return
 	$TERMINAL
