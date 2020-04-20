@@ -6,7 +6,7 @@ pacman --needed -S \
 	xdotool xorg-xdpyinfo xorg-xrandr bspwm tmux ttf-ubuntu-font-family ttf-jetbrains-mono \
 	anki calcurse cmus code firefox flameshot fzf gimp gnome-font-viewer gscan2pdf htop hub imagemagick \
 	kdenlive kitty libreoffice-still lxappearance mpv nemo neofetch neovim simplescreenrecorder \
-	pass picom ranger rofi sxiv telegram-desktop thunderbird tldr w3m youtube-dl zathura \
+	openssh pass picom ranger rofi sxiv telegram-desktop thunderbird tldr w3m youtube-dl zathura \
 	zathura-pdf-mupdf zsh clang \
 	fcitx fcitx-im fcitx-mozc \
 
