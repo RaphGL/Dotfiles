@@ -9,12 +9,11 @@ confirm_prompt = widget.Prompt()
 
 color = {
     'background': '#21222c',
-    'white': '#f8f8f2',
+    'foreground': '#f8f8f2',
     'active': '#6272a4',
     'inactive': '#44475a',
-    'red': '#ff5555',
-    'purple': '#6272a4',
-    'blue': '#8be9fd',
+    'urgent': '#ff5555',
+    'floating': '#8be9fd',
 }
 
 @hook.subscribe.startup_once
@@ -64,7 +63,7 @@ for i in groups:
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
     )
 
-#My preferred layouts
+#My preferurgent layouts
 layouts = [
     layout.MonadTall(border_focus=color['active'], border_width=2, margin=8),
     layout.Max(),
@@ -81,13 +80,13 @@ screens = [
         top=bar.Bar(
             [
                 #Groups and Window names
-                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['red'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding_x=1),
+                widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['urgent'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding_x=1),
                 widget.WindowName(),
                 confirm_prompt,
                 # System updates
                 widget.Image(filename='~/.config/qtile/endbright.png'),
                 widget.Image(filename='~/.config/qtile/icons/updatebright.png'),
-                widget.Pacman(background=color['purple'], foreground=color['white']),
+                widget.Pacman(background=color['active'], foreground=color['foreground']),
                 # Volume control
                 widget.Image(filename='~/.config/qtile/powerlinedark.png'),
                 widget.Image(filename='~/.config/qtile/icons/volumedark.png'),
@@ -95,7 +94,7 @@ screens = [
                 # Date and time widget
                 widget.Image(filename='~/.config/qtile/powerlinebright.png'),
                 widget.Image(filename='~/.config/qtile/icons/calendarbright.png'),
-                widget.Clock(background=color['purple'], foreground=color['white'], format='%A - %B %d, %Y  %I:%M %p'),
+                widget.Clock(background=color['active'], foreground=color['foreground'], format='%A - %B %d, %Y  %I:%M %p'),
                 # System tray
                 widget.Image(filename='~/.config/qtile/powerlinedark.png'),
                 widget.Image(filename='~/.config/qtile/icons/systraydark.png'),
@@ -122,7 +121,7 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(border_focus=color['blue'], border_width=2)
+floating_layout = layout.Floating(border_focus=color['floating'], border_width=2)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 extentions = []
