@@ -18,6 +18,7 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+" -----GENERAL SETTINGS-----
 colorscheme dracula
 syntax on
 set background=dark
@@ -38,7 +39,14 @@ set smartcase
 " Autocompletion
 set wildmode=longest,list,full
 set splitbelow splitright
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
 
+" -----GITGUTTER SETTINGS-----
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+
+" -----NERDTREE SETTINGS-----
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
