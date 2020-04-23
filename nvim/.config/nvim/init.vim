@@ -39,7 +39,7 @@ set smartcase
 " Autocompletion
 set wildmode=longest,list,full
 set splitbelow splitright
-au BufWinLeave * mkview
+au BufWinLeave * silent mkview
 au BufWinEnter * silent loadview
 
 " -----GITGUTTER SETTINGS-----

@@ -1,15 +1,5 @@
 #!/bin/env bash
-pacman --needed -S \
-	adobe-source-code-pro-fonts adobe-source-han-sans-jp-fonts alsa-utils \
-	base-devel cmake curl dunst feh adapta-gtk-theme git libnotify npm \
-	pamixer pulseaudio pulseaudio-alsa python-pip qtile stow sxhkd xclip \
-	xdotool xorg-xdpyinfo xorg-xrandr bspwm tmux ttf-ubuntu-font-family ttf-jetbrains-mono \
-	anki calcurse cmus code firefox flameshot fzf gimp gnome-font-viewer gscan2pdf htop hub imagemagick \
-	kdenlive kitty libreoffice-still lxappearance mpv nemo neofetch neovim simplescreenrecorder \
-	openssh pass picom ranger rofi sxiv telegram-desktop thunderbird tldr w3m youtube-dl zathura \
-	zathura-pdf-mupdf zsh clang \
-	fcitx fcitx-im fcitx-mozc \
-
-pip install pynvim msgpack-python jedi tuir
-npm install -g neovim
-sh -c ~/dotfiles/.scripts/vscode_extin.sh
+curr_dir=$(pwd)
+pacman --needed -S $(cat $curr_dir/dotfiles/.lists/packages.list)
+pip install $(cat $curr_dir/dotfiles/.lists/pip.list)
+npm install -g $(cat $curr_dir/dotfiles/.lists/npm.list)
