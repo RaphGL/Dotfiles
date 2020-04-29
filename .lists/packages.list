@@ -11,9 +11,8 @@ cmus
 code
 curl
 dunst
-fcitx
-fcitx-im
-fcitx-mozc
+ibus
+ibus-anthy
 feh
 firefox
 flameshot

@@ -39,8 +39,6 @@ set smartcase
 " Autocompletion
 set wildmode=longest,list,full
 set splitbelow splitright
-au BufWinLeave * silent mkview
-au BufWinEnter * silent loadview
 
 " -----GITGUTTER SETTINGS-----
 let g:gitgutter_enabled = 1

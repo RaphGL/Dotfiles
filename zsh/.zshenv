@@ -11,6 +11,12 @@ export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
 
+# Japanese input
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -d -x
+
 ### Man page syntax highlighting ###
 # Start blinking
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) # green
