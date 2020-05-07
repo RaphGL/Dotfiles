@@ -6,6 +6,8 @@ from libqtile import layout, bar, widget, hook
 
 mod = "mod4"
 confirm_prompt = widget.Prompt()
+# Arch, Debian, Ubuntu, Fedora and FreeBSD are supported
+distribution = 'Fedora'
 
 color = {
     'background': '#21222c',
@@ -86,7 +88,7 @@ screens = [
                 # System updates
                 widget.Image(filename='~/.config/qtile/endbright.png'),
                 widget.Image(filename='~/.config/qtile/icons/updatebright.png'),
-                widget.Pacman(background=color['active'], foreground=color['foreground']),
+                widget.CheckUpdates(distro=distribution, background=color['active'], foreground=color['foreground']),
                 # Volume control
                 widget.Image(filename='~/.config/qtile/powerlinedark.png'),
                 widget.Image(filename='~/.config/qtile/icons/volumedark.png'),
@@ -98,7 +100,7 @@ screens = [
                 # System tray
                 widget.Image(filename='~/.config/qtile/powerlinedark.png'),
                 widget.Image(filename='~/.config/qtile/icons/systraydark.png'),
-                widget.Systray(background=color['inactive']),
+                widget.Systray(icon_size=21, padding=6, background=color['inactive']),
             ],
             25, background=color['background'],
         ),

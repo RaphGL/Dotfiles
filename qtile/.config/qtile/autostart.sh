@@ -1,10 +1,12 @@
 #!/usr/bin/env sh
-# Eye candy
-feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper4.jpg
-### Temporarily using picom-tryone-git ###
+# Set wallpaper
+feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper5.jpg
+# Lock screen on inactivity
+xautolock -time 10 -locker "i3lock -i ~/Pictures/Wallpapers/lockscreen.png" -killer "systemctl suspend" -killtime 10 &
+# Compositor
 picom -b --experimental-backends
-# Keyboard layout 
-fcitx -d
+# Swap Escape and Caps Lock
+setxkbmap -option caps:swapescape
 # Screenshot program
 flameshot &
 # Notification daemon
@@ -13,3 +15,5 @@ dunst &
 sxhkd &
 # Custom scripts
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &
+# Polkit
+lxpolkit &
