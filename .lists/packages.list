@@ -1,8 +1,9 @@
-adapta-gtk-theme
 adobe-source-han-sans-jp-fonts
 alsa-utils
 anki
 base-devel
+breeze-cursor-theme
+breeze-icon-theme
 bspwm
 calcurse
 clang
@@ -11,8 +12,6 @@ cmus
 code
 curl
 dunst
-ibus
-ibus-anthy
 feh
 firefox
 flameshot
@@ -23,12 +22,16 @@ gnome-font-viewer
 gscan2pdf
 htop
 hub
+i3lock
+ibus
+ibus-anthy
 imagemagick
 kdenlive
 kitty
 libnotify
 libreoffice-still
 lxappearance
+lxpolkit
 mpv
 nemo
 neofetch

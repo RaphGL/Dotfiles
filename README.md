@@ -74,7 +74,7 @@ $ ./dotfiles/.scripts/aurpacs.sh # Installs AUR packages I use
 
 If you're on anything else:
 ```sh
-$ sudo YOUR_PACKAGE_MANAGER INSTALL_COMMAND $(cat ~/dotfiles/.lists/packages.list)
+$ sudo YOUR_PACKAGE_MANAGER INSTALL_COMMAND $(cat $HOME/dotfiles/.lists/packages.list)
 ```
 The complete install installs code editors, a web browser, an image viewer, a file manager and other programs.  
 

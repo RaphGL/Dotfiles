@@ -52,7 +52,7 @@ super + f
 
 ### Screenlocker ###
 super + control + 9
-	betterlockscreen -l
+        i3lock -f -i ~/Pictures/Wallpapers/lockscreen.png
 
 ### Kill window ###
 super + control + x
@@ -114,7 +114,7 @@ shift + Print
 
 ### Volume Control ###
 super + {Up, Down}
-	pamixer {-i 2, -d 2}
+	pactl -- set-sink-volume 0 {+2%, -2%}
 
 ### Music Control ###
 # Previous and next song

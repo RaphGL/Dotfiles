@@ -23,6 +23,7 @@ colorscheme dracula
 syntax on
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
+let mapleader = ","
 set mouse=a
 set number relativenumber
 set nu rnu
