@@ -108,3 +108,6 @@ You will probably want to edit Qtile's config file and install the following if 
 Make sure to clone both *Oh my Zsh!* and *Zsh-syntax-highlighting* to the ~/.zsh-plugins directory or source them yourself  
 - [Vim-plug](https://github.com/junegunn/vim-plug) 
 If you intend to use my vim setup make sure to install pip's pynvim and npm's neovim packages. For C or python you need to install clang and jedi(pip package) repectively.
+
+## License  
+[WTFPL](http://www.wtfpl.net/) © Rafael Lopes
