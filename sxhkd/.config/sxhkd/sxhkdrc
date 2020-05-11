@@ -97,9 +97,6 @@ super + F4
 # Launch mail client
 super + F5
 	thunderbird
-# Launch note-taking app
-super + F6
-	joplin-desktop
 
 ### Screenshot ###
 # Take a full screenshot and copy to clipboard
