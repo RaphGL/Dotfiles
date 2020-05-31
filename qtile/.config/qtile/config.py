@@ -7,7 +7,7 @@ from libqtile import layout, bar, widget, hook
 mod = "mod4"
 confirm_prompt = widget.Prompt()
 # Arch, Debian, Ubuntu, Fedora and FreeBSD are supported
-distribution = 'Fedora'
+distribution = 'Arch'
 
 color = {
     'background': '#21222c',

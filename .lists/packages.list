@@ -2,8 +2,7 @@ adobe-source-han-sans-jp-fonts
 alsa-utils
 anki
 base-devel
-breeze-cursor-theme
-breeze-icon-theme
+breeze-icons
 bspwm
 calcurse
 clang
@@ -13,6 +12,7 @@ code
 curl
 dunst
 feh
+file-roller
 firefox
 flameshot
 fzf
@@ -31,9 +31,10 @@ kitty
 libnotify
 libreoffice-still
 lxappearance
-lxpolkit
+lxqt-policykit
 mpv
 nemo
+nemo-fileroller
 neofetch
 neovim
 npm

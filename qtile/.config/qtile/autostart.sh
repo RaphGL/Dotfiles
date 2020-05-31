@@ -13,7 +13,9 @@ flameshot &
 dunst &
 # Hotkey daemon
 sxhkd &
+# Input bus
+ibus-daemon -d -x
 # Custom scripts
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &
 # Polkit
-lxpolkit &
+lxqt-policykit-agent &
