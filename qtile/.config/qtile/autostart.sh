@@ -1,8 +1,6 @@
 #!/usr/bin/env sh
 # Set wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/wallpaper5.jpg
-# Lock screen on inactivity
-xautolock -time 10 -locker "i3lock -i ~/Pictures/Wallpapers/lockscreen.png" -killer "systemctl suspend" -killtime 10 &
+feh --bg-fill ~/Pictures/schedule.png
 # Compositor
 picom -b --experimental-backends
 # Swap Escape and Caps Lock
