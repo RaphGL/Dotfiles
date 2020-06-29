@@ -1,5 +1,0 @@
-#!/bin/sh
-while true
-do
-	echo "$(pamixer --get-volume)%"
-done
