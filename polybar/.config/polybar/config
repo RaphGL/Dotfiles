@@ -11,7 +11,7 @@ alert = #ff5555
 format-foreground =
 format-underline = ${colors.primary}
 format-background = ${colors.background-alt}
-format-padding = 1
+format-padding = 2
 format-overline =
 format-margin = 0
 format-offset =
@@ -34,7 +34,7 @@ bottom = false
 separator =
 
 width = 100%
-height = 32
+height = 27
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -49,10 +49,10 @@ foreground = ${colors.foreground}
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Ubuntu Regular:pixelsize=11;
-font-1 = JetBrains Mono Medium:pixelsize=11;
-font-2 = NotoColorEmoji:fontformat=truetype:scale=11:antialias=false;
-font-3 = IPAGothic:fontformat=truetype:pixelsize=11:antialias=false;
+font-0 = Cantarell:pixelsize=13;
+font-1 = JetBrains Mono Medium:pixelsize=13;
+font-2 = NotoColorEmoji:fontformat=truetype:scale=13:antialias=false;
+font-3 = IPAGothic:fontformat=truetype:pixelsize=13:antialias=false;
 
 modules-left = bspwm xwindow
 modules-right = pacman-packages time
@@ -70,8 +70,8 @@ cursor-scroll = default
 
 [module/xwindow]
 type = internal/xwindow
-label = %title%
-label-maxlen = 30
+label = "   %title%"
+label-maxlen = 50
 
 format-underline =
 format-background =
@@ -80,7 +80,7 @@ format-padding =
 [module/bspwm]
 type = internal/bspwm
 
-enable-scroll = true
+enable-scroll = false
 label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
@@ -108,7 +108,7 @@ scroll-down = bspwm-deskprev
 
 [module/pacman-packages]
 type = custom/ipc
-hook-0 = sudo pacman -Qu | wc -l | tr -d " \t\n\r" 
+hook-0 = pacman -Qu | wc -l | tr -d " \t\n\r" 
 format-prefix = "Updates: "
 click-left = 
 initial = 1

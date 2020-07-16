@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 ### Autostart ###
-polybar -r bar &
 xsetroot -cursor_name left_ptr
 # Set wallpaper
 feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper5.jpg
@@ -20,6 +19,7 @@ ibus-daemon -d -x
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &
 # Polkit
 lxqt-policykit-agent &
+polybar -r bar &
 
 
 ### Gaps ###
