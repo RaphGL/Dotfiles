@@ -1,1 +1,1 @@
-yay -S python-ueberzug polybar cheat
+yay -S python-ueberzug polybar cheat picom-ibhagwan-git

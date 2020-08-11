@@ -31,13 +31,12 @@ libreoffice-still
 lxappearance
 lxqt-policykit
 mpv
-nemo
-nemo-fileroller
 neofetch
 neovim
 npm
 openssh
 pamixer
+pcmanfm-gtk3
 picom
 pulseaudio
 pulseaudio-alsa
@@ -45,7 +44,6 @@ python-pip
 qbittorrent
 qtile
 ranger
-riot-desktop
 rofi
 simplescreenrecorder
 stow

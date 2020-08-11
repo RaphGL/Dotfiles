@@ -84,7 +84,7 @@ super + Return
 	$TERMINAL
 # Launch gui file manager
 super + F1
-	nemo
+        pcmanfm
 # Launch web browser
 super + F2
 	$BROWSER

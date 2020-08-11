@@ -1,4 +1,3 @@
-adapta-gtk-theme
 adobe-source-code-pro-fonts
 adobe-source-han-sans-jp-fonts
 alsa-utils
@@ -12,7 +11,7 @@ htop
 kitty
 libnotify
 lxappearance
-lxpolkit
+lxqt-policykit
 picom
 pulseaudio
 pulseaudio-alsa

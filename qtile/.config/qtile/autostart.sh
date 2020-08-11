@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # Set wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/wallpaper5.jpg
+feh --bg-fill ~/Pictures/Wallpapers/arch.png
 # Compositor
 picom -b --experimental-backends
 # Swap Escape and Caps Lock
