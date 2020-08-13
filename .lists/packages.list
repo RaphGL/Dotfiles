@@ -2,6 +2,7 @@ adobe-source-han-sans-jp-fonts
 alsa-utils
 anki
 base-devel
+breeze
 breeze-icons
 bspwm
 calcurse
@@ -12,7 +13,6 @@ code
 curl
 dunst
 feh
-file-roller
 firefox
 flameshot
 fzf
@@ -42,9 +42,10 @@ pulseaudio
 pulseaudio-alsa
 python-pip
 qbittorrent
+qt5ct
 qtile
-ranger
 rofi
+rsync
 simplescreenrecorder
 stow
 sxhkd
@@ -53,6 +54,7 @@ telegram-desktop
 thunderbird
 tldr
 tmux
+trash-cli
 ttf-ubuntu-font-family
 veracrypt
 w3m

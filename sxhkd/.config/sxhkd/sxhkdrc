@@ -66,7 +66,7 @@ super + q
 ### Keybindings for programs ###
 # Launch terminal file manager
 super + v
-	$TERMINAL ranger
+	$TERMINAL lf
 # Launch calendar app
 super + c
 	$TERMINAL calcurse

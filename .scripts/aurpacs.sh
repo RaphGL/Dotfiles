@@ -1,1 +1,1 @@
-yay -S python-ueberzug polybar cheat picom-ibhagwan-git
+yay -S polybar cheat picom-ibhagwan-git lf dragon-drag-and-drop
