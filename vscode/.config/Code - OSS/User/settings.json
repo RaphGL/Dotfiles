@@ -15,4 +15,6 @@
     "vim.enableNeovim": true,
     "workbench.colorTheme": "Dracula",
     "editor.fontLigatures": true,
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "files.autoSave": "afterDelay",
 }

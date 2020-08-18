@@ -1,6 +1,7 @@
 # Raph's Dotfiles  
 
 This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/) could be used to quickly set everything up.  
+A custom dotfile manager is being written, the setup script is currently unreliable, setting it up manually is advised.
 
 ## Screenshots  
 
@@ -19,42 +20,42 @@ This config was structured so that [GNU Stow](https://www.gnu.org/software/stow/
 
 ## Keybindings  
 
-|          Action         | Shortcut                       |
-|:-----------------------:|--------------------------------|
-| **General Keybindings**                                  |
-| Close window            | super + w                      |
-| Kill window             | super control + x              |
-| Logout                  | super + control + 0            |
-| Lock screen*            | super + control + 9            |
-| Restart window manager  | super + control + r            |
-| **Moving around**                                        |
-| Move between windows    | super + {h, j, k, l}           |
-| Change window size      | super + {y, u, i, o}           |
-| Move windows around     | super + control + {h, j, k, l} |
-| **Programs**                                             |
-| Terminal                | super + return                 |
-| GUI file Manager        | super + F1                     |
-| Firefox                 | super + F2                     |
-| Visual Studio Code      | super + F3                     |
-| System Monitor          | super + F4                     |
-| Mail client             | super + F5                     |
-| Note-taking app         | super + F6                     |
-| Calendar app            | super + c                      |
-| Music player            | super + m                      |
-| Application Launcher    | super + r                      |
-| Terminal file manager   | super + v                      |
-| **Volume and CMUS external control**	         		   |
-| Volume up		          | super + up                     |
-| Volume down		      | super + down                   |
-| Next song	          	  | super + period                 |
-| Previous song	     	  | super + comma                  |
-| Forward song		      | super + control + period       |
-| Backward song		      | super + control + comma        |
-| Pause 		          | super + p                      |
-| **Layouts**                                              |
-| Toggle monocle layout   | super + tab                    |
-| Toggle floating window  | super + control + space        |
-| Fullscreen              | super + f                      |
+| Action                               | Shortcut                       |
+|--------------------------------------|--------------------------------|
+| **General Keybindings**              |                                |
+| Close window                         | super + w                      |
+| Kill window                          | super control + x              |
+| Logout                               | super + control + 0            |
+| Lock screen*                         | super + control + 9            |
+| Restart window manager               | super + control + r            |
+| **Moving around**                    |                                |
+| Move between windows                 | super + {h, j, k, l}           |
+| Change window size                   | super + {y, u, i, o}           |
+| Move windows around                  | super + control + {h, j, k, l} |
+| **Programs**                         |                                |
+| Terminal                             | super + return                 |
+| GUI file Manager                     | super + F1                     |
+| Firefox                              | super + F2                     |
+| Visual Studio Code                   | super + F3                     |
+| System Monitor                       | super + F4                     |
+| Mail client                          | super + F5                     |
+| Note-taking app(vim plugin)          | super + F6                     |
+| Calendar app                         | super + c                      |
+| Music player                         | super + m                      |
+| Application Launcher                 | super + r                      |
+| Terminal file manager                | super + v                      |
+| **Volume and CMUS external control** |                                |
+| Volume up                            | super + up                     |
+| Volume down                          | super + down                   |
+| Next song                            | super + period                 |
+| Previous song                        | super + comma                  |
+| Forward song                         | super + control + period       |
+| Backward song                        | super + control + comma        |
+| Pause                                | super + p                      |
+| **Layouts**                          |                                |
+| Toggle monocle layout                | super + tab                    |
+| Toggle floating window               | super + control + space        |
+| Fullscreen                           | super + f                      |
 
 ## Installation  
 To set all the dotfiles make sure you have stow installed and then run:  
@@ -74,7 +75,7 @@ $ ./dotfiles/.scripts/aurpacs.sh # Installs AUR packages I use
 
 If you're on anything else:
 ```sh
-$ sudo YOUR_PACKAGE_MANAGER INSTALL_COMMAND $(cat $HOME/dotfiles/.lists/packages.list)
+$ sudo PACKAGE_MANAGER INSTALL_COMMAND $(cat $HOME/dotfiles/.lists/packages.list)
 ```
 The complete install installs code editors, a web browser, an image viewer, a file manager and other programs.  
 

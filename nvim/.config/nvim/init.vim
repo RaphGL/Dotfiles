@@ -3,7 +3,6 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'dracula/vim', { 'as': 'dracula' }
  	Plug 'sheerun/vim-polyglot'
-	Plug 'jiangmiao/auto-pairs'
 	Plug 'ap/vim-css-color'
 	" Fuzzy finder
 	Plug 'ctrlpvim/ctrlp.vim'
@@ -12,10 +11,13 @@ call plug#begin()
 	Plug 'xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'scrooloose/nerdcommenter'
-	Plug 'christoomey/vim-tmux-navigator'
   	Plug 'airblade/vim-gitgutter'
 	" code completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Note taking in Vim
+    Plug 'vimwiki/vimwiki'
+    " Make markdown tables easier
+    Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 " -----GENERAL SETTINGS-----
@@ -23,7 +25,7 @@ colorscheme dracula
 syntax on
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
-let mapleader = ","
+let mapleader=","
 set mouse=a
 set number relativenumber
 set nu rnu
@@ -40,6 +42,17 @@ set smartcase
 " Autocompletion
 set wildmode=longest,list,full
 set splitbelow splitright
+" Fix indenting visual block
+vmap < <gv
+vmap > >gv
+" Change split navigation shortcuts
+map <A-h> <C-w>h
+map <A-j> <C-w>j
+map <A-k> <C-w>k
+map <A-l> <C-w>l
+
+" -----VIMWIKI-----
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki', 'path_html': '~/Documents/vimwiki_html'}]
 
 " -----GITGUTTER SETTINGS-----
 let g:gitgutter_enabled = 1
