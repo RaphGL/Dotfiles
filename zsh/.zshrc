@@ -2,24 +2,43 @@ export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
 ZSH_THEME="gentoo"
 
 ### Aliases ###
+# Quick edit configs
+alias nvimc="$EDITOR ~/.config/nvim/init.vim"
+alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
-alias diff="diff --color=always"
-alias g="git"
-alias gc="git commit"
-alias gcc99="gcc -std=c99"
-alias grep="grep --color=auto"
-alias gs="git status"
 alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
+
+# Change defaults
+alias grep="grep --color=auto"
+alias diff="diff --color=always"
+alias df="df -h"
 alias la="ls -lah"
 alias ll="ls -lh"
 alias ls="ls --color=auto"
 alias mv="mv -i"
-alias nvimc="$EDITOR ~/.config/nvim/init.vim"
-alias qtilec="$EDITOR ~/.config/qtile/config.py"
-alias rm="rm -i"
+alias cp="cp -i"
+alias gcc99="gcc -std=c99"
 alias v="nvim"
-alias yt="youtube-dl"
+
+# Youtube-DL
+alias yt="youtube-dl -f bestvideo+bestaudio"
 alias yta="youtube-dl -f bestaudio"
+
+# Git aliases
+alias g="git"
+alias gc="git commit"
+alias gp="git push"
+alias ga="git add"
+alias gl="git log"
+alias gs="git status"
+alias gck="git checkout"
+
+# Pacman and Yay
+alias pacsyu="sudo pacman -Syu"
+alias yaysua="yay -Sua --noconfirm"
+alias pacunlock="sudo rm /var/lib/pacman/db.lck" # clean pacman lock
+alias paccleanup="sudo pacman -Rns $(pacman -Qtdq)" # remove orphaned packages
+
 export UPDATE_ZSH_DAYS=5
 source $ZSH/oh-my-zsh.sh
 
