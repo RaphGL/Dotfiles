@@ -99,6 +99,7 @@ let g:coc_global_extensions = [
   \ 'coc-texlab',
   \ 'coc-python',
   \ 'coc-clangd',
+  \ 'coc-go',
   \ ]
 
 " From Coc Readme

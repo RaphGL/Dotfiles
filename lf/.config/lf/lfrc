@@ -1,7 +1,18 @@
+# Quick navigation
+map gh cd ~
+map gc cd ~/.config
+map gD cd ~/Downloads
+map gd cd ~/Documents
+map gb cd ~/Documents/Books
+map gp cd ~/Pictures
+map gv cd ~/Videos
+map gm cd ~/Music
+
 set preview true
 set color256 true
 set drawbox true
 set ignorecase true
+set info size
 
 # Fix Zsh word splitting
 set shell zsh
@@ -15,8 +26,48 @@ cmd dragon %dragon-drag-and-drop -a $fx
 # dnd all files it closes window after sucessful drop
 cmd dragonall %dragon-drag-and-drop -x -a $fx
 
+# Trash functions
 cmd trash %trash-put $fx
+map tt trash
+cmd trash-empty %trash-empty
+map te trash-empty
+cmd trash-list %trash-list|less
 
+
+# Fuzzy CD
+cmd fcd ${{
+  res="$(find . -maxdepth 3 | fzf --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+# Archive functions
+cmd extract ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd zip %zip -r "$f.zip" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+map az zip
+map at tar
+map ag targz
+map ab tarbz2
+map au extract
+
+# Misc
 cmd bulk-rename ${{
     old=$(mktemp)
     new=$(mktemp)
