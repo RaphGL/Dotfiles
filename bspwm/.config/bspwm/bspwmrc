@@ -1,12 +1,13 @@
 #!/usr/bin/env sh
 ### Autostart ###
 xsetroot -cursor_name left_ptr
-# Set wallpaper
-feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper5.jpg
-# Compositor
-picom -b --experimental-backends
 # Swap Escape and Caps Lock
 setxkbmap -option caps:swapescape
+# Set wallpaper and run polybar
+feh --bg-fill ~/dotfiles/wallpapers/Pictures/Wallpapers/wallpaper5.jpg
+polybar -r bar &
+# Compositor
+picom -b --experimental-backends
 # Screenshot program
 flameshot &
 # Notification daemon
@@ -19,7 +20,6 @@ ibus-daemon -d -x
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &
 # Polkit
 lxqt-policykit-agent &
-polybar -r bar &
 
 
 ### Gaps ###
@@ -28,7 +28,7 @@ bspc config bottom_padding     0
 bspc config left_padding       0
 bspc config right_padding      0
 bspc config border_width       2
-bspc config window_gap         8
+bspc config window_gap         6
 
 ### Focusing behavior ###
 bspc config focus_follows_pointer true

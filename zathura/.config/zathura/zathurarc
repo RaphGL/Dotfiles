@@ -62,5 +62,5 @@ set recolor-darkcolor           "#f8f8f2" # Foreground
 # Startup options
 #
 #
-set adjust-open width
+set adjust-open best-fit 
 set recolor true

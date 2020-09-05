@@ -12,20 +12,21 @@ super + control + 0
 	bspc quit
 
 # Change window in focus
-super + {h, l}
-	bspc node -f {west, east}
-
-# Focus the next/previous node in the current desktop
-super + {j, k}
-	bspc node -f {next,prev}.local
+super + {h, j, k, l}
+	bspc node -f {west, south, north, east}
 
 # Move window
 super + control + {h, j, k, l}
-	bspc node -s {west, south, north, east} --follow
+	#bspc node -s {west, south, north, east} --follow
+    bspc node @parent -F {vertical,horizontal,horizontal,vertical}
+
+# Rotate the tree from the current nodes parent
+super + control + {Right, Left}
+	bspc node @parent --rotate {90,270}
 
 # Change to desktop x
 super + {1-8}
-	bspc desktop -f ^{1-8}
+    bspc desktop ^{1-8}.!focused -f || bspc desktop last -f
 
 # Move x to desktop y
 super + shift + {1-8}
