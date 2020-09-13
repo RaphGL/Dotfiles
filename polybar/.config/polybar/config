@@ -49,7 +49,7 @@ foreground = ${colors.foreground}
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Cantarell:pixelsize=13;
+font-0 = Ubuntu:pixelsize=13;
 font-1 = JetBrains Mono Medium:pixelsize=13;
 font-2 = NotoColorEmoji:fontformat=truetype:scale=13:antialias=false;
 font-3 = IPAGothic:fontformat=truetype:pixelsize=13:antialias=false;
