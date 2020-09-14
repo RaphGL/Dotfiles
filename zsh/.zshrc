@@ -2,6 +2,20 @@ export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
 ZSH_THEME="gentoo"
 
 ### Aliases ###
+# fuzzy find directories
+fuzzycd() {
+	DIR=$(find $HOME -maxdepth 4 -type d | fzf)
+	cd $DIR
+}
+zle -N fuzzycd
+bindkey '^P' fuzzycd
+
+fuzzyhistory() {
+    eval $(history | fzf --layout=reverse --height=8 | awk '{for(a=2;a<=NF;++a) printf $a " ";print""}')
+}
+zle -N fuzzyhistory
+bindkey '^R' fuzzyhistory
+
 # Quick edit configs
 alias nvimc="$EDITOR ~/.config/nvim/init.vim"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
@@ -45,9 +59,6 @@ source $ZSH/oh-my-zsh.sh
 ### vi mode ###
 bindkey -v
 export KEYTIMEOUT=1
-
-# Enable searching through history
-bindkey '^R' history-incremental-pattern-search-backward
 
 # Edit line in vim buffer ctrl-v
 autoload edit-command-line; zle -N edit-command-line
@@ -104,13 +115,6 @@ zle-line-init() {
     echo -ne "\e[5 q"
 }
 zle -N zle-line-init
-
-# fuzzy find directories
-fuzzycd() {
-	DIR=$(find $HOME -maxdepth 4 -type d | fzf)
-	cd $DIR
-}
-alias fcd="fuzzycd"
 
 # Syntax highlighting must be sourced in the end of the file
 source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
