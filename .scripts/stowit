@@ -11,6 +11,7 @@ setup_dotfiles()
 	echo -e "${BLUE}Installing Vim-Plug for NeoVim...${NC}"
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+		
 
 	#Installing "Oh-My-Zsh!" and Syntax Highlighting
 	echo -e "${BLUE}Setting up Zsh...${NC}"

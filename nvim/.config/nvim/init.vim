@@ -5,7 +5,7 @@ call plug#begin()
  	Plug 'sheerun/vim-polyglot'
 	Plug 'ap/vim-css-color'
 	" Fuzzy finder
-	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'junegunn/fzf'
 	"nerdtree
 	Plug 'scrooloose/nerdtree'
 	Plug 'xuyuanp/nerdtree-git-plugin'
@@ -51,6 +51,9 @@ map <A-h> <C-w>h
 map <A-j> <C-w>j
 map <A-k> <C-w>k
 map <A-l> <C-w>l
+
+" ----- FZF -----
+nnoremap <C-p> :FZF<CR>
 
 " -----VIMWIKI-----
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki', 'path_html': '~/Documents/vimwiki_html'}]
