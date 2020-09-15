@@ -6,6 +6,7 @@ call plug#begin()
 	Plug 'ap/vim-css-color'
 	" Fuzzy finder
 	Plug 'junegunn/fzf'
+	Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 	"nerdtree
 	Plug 'scrooloose/nerdtree'
 	Plug 'xuyuanp/nerdtree-git-plugin'
@@ -53,7 +54,7 @@ map <A-k> <C-w>k
 map <A-l> <C-w>l
 
 " ----- FZF -----
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :FzfPreviewDirectoryFiles<CR>
 
 " -----VIMWIKI-----
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki', 'path_html': '~/Documents/vimwiki_html'}]

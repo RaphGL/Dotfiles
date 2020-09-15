@@ -4,14 +4,16 @@ ZSH_THEME="gentoo"
 ### Aliases ###
 # fuzzy find directories
 fuzzycd() {
-	DIR=$(find $HOME -maxdepth 4 -type d | fzf)
+	DIR=$(find $HOME -maxdepth 4 -type d | fzf --layout=reverse --height=20)
 	cd $DIR
+	zle reset-prompt
 }
 zle -N fuzzycd
 bindkey '^P' fuzzycd
 
 fuzzyhistory() {
-    eval $(history | fzf --layout=reverse --height=8 | awk '{for(a=2;a<=NF;++a) printf $a " ";print""}')
+    eval $(history | fzf --layout=reverse --height=20 --tiebreak=index --tac | awk '{for(a=2;a<=NF;++a) printf $a " ";print""}')
+	zle reset-prompt
 }
 zle -N fuzzyhistory
 bindkey '^R' fuzzyhistory
