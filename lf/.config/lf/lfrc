@@ -20,6 +20,11 @@ set shellopts '-eu:--shwordsplit'
 set ifs "\n"
 set filesep "\n"  # default already
 
+# spawn a separate process for the opened file
+cmd open &{{
+    setsid $OPENER $f
+}}
+
 # Drag and drop files
 # dnd files one by one
 cmd dragon %dragon-drag-and-drop -a $fx
