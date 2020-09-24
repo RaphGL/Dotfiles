@@ -117,7 +117,7 @@ def set_widgets():
        # Date and time widget
        arrow_widget('light'),
        widget.Image(filename='~/.config/qtile/icons/calendarlight.png'),
-       widget.Clock(background=color['active'], foreground=color['foreground'], format='%A - %B %d, %Y  %I:%M %p'),
+        widget.Clock(background=color['active'], foreground=color['foreground'], format='%A %Y/%m/%d %H:%M'),
        # System tray
        arrow_widget('dark'),
        widget.Image(filename='~/.config/qtile/icons/systraydark.png'),

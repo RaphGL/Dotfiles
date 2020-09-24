@@ -1,5 +1,5 @@
 export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
-ZSH_THEME="gentoo"
+ZSH_THEME="simple"
 
 ### Aliases ###
 # fuzzy find directories
