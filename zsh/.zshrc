@@ -1,5 +1,5 @@
 export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
-ZSH_THEME="simple"
+ZSH_THEME="gentoo"
 
 ### Aliases ###
 # fuzzy find directories
@@ -27,6 +27,7 @@ alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
 # Change defaults
 alias grep="grep --color=auto"
 alias diff="diff --color=always"
+alias bat="bat --theme Dracula"
 alias df="df -h"
 alias la="ls -lah"
 alias ll="ls -lh"

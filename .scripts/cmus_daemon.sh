@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 get_status()
 {
  cmus-remote -Q | sed -n -r "s/file\s//; s/\/home\/\w+\/Music\///; s/\.\w*$//;2p"
