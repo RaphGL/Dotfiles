@@ -32,7 +32,6 @@ set number relativenumber
 set nu rnu
 set tabstop=4
 set shiftwidth=4
-set expandtab
 set hidden
 set termguicolors
 set cursorline

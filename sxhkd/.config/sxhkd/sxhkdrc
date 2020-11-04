@@ -78,8 +78,8 @@ super + m
 super + n
 	$TERMINAL nmtui
 # Launch application launcher
-super + r
-	rofi -show-icons -matching glob -show drun
+#super + r
+#	rofi -show-icons -matching glob -show drun
 # Launch terminal
 super + Return
 	$TERMINAL
@@ -126,4 +126,4 @@ super + control + {comma, period}
 	cmus-remote -C {"seek -2", "seek +2"}
 # Pause
 super + p
-	cmus-remote -u
+	cmus-remote -u*/
