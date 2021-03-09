@@ -1,12 +1,9 @@
-acpi
+acpid
 adobe-source-han-sans-jp-fonts
 alsa-utils
 anki
 base-devel
 bat
-breeze
-breeze-icons
-bspwm
 calcurse
 clang
 cmake
@@ -50,12 +47,10 @@ qt5ct
 qtile
 rofi
 rsync
-simplescreenrecorder
 stow
 sxhkd
 sxiv
 telegram-desktop
-thunderbird
 tldr
 tmux
 trash-cli
@@ -67,6 +62,4 @@ xclip
 xdotool
 xorg-xrandr
 youtube-dl
-zathura
-zathura-pdf-mupdf
 zsh

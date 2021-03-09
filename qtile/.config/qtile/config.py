@@ -20,15 +20,6 @@ def autostart():
     autostart = os.path.expanduser('~/.config/qtile/autostart.sh')
     os.system(f'{autostart}')
 
-def update_widget(distribution):
-    '''
-    Arch, Debian, Ubuntu, Fedora and FreeBSD are supported
-    '''
-    if distribution == 'Arch':
-        return widget.Pacman(background=color['active'], foreground=color['foreground'])
-    else:
-        return widget.CheckUpdates(distro=distribution, background=color['active'], foreground=color['foreground']),
-
 def set_keybindings():
     return [
         #General Key bindings
@@ -99,10 +90,10 @@ def set_widgets():
        widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'], urgent_border=color['urgent'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding_x=1),
        widget.WindowName(),
        confirm_prompt,
-       # System updates
+       # Battery widget
        arrow_widget('endlight'),
-       widget.Image(filename='~/.config/qtile/icons/updatelight.png'),
-       system_updates,
+       widget.Image(filename='~/.config/qtile/icons/batterylight.png'),
+       widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', background=color['active']),
        # Volume control
        arrow_widget('dark'),
        widget.Image(filename='~/.config/qtile/icons/volumedark.png'),
@@ -124,7 +115,6 @@ def set_widgets():
        widget.Systray(icon_size=21, padding=6, background=color['inactive']),
     ]
 
-system_updates = update_widget('Arch')
 keys = set_keybindings()
 layouts = set_layouts()
 groups = set_groups('12345678')

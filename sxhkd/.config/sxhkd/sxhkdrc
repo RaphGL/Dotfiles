@@ -1,56 +1,3 @@
-### BSPWM config ###
-# Close window
-super + w
-	bspc node -c
-
-# Restart bspwm
-super + control + r
-        bspc wm -r
-
-# Leave bspwm
-super + control + 0
-	bspc quit
-
-# Change window in focus
-super + {h, j, k, l}
-	bspc node -f {west, south, north, east}
-
-# Move window
-super + control + {h, j, k, l}
-	#bspc node -s {west, south, north, east} --follow
-    bspc node @parent -F {vertical,horizontal,horizontal,vertical}
-
-# Rotate the tree from the current nodes parent
-super + control + {Right, Left}
-	bspc node @parent --rotate {90,270}
-
-# Change to desktop x
-super + {1-8}
-    bspc desktop ^{1-8}.!focused -f || bspc desktop last -f
-
-# Move x to desktop y
-super + shift + {1-8}
-	bspc node -d ^{1-8}
-
-# Resize window
-super + {y, u, i, o}
-	bspc node -z {left -10 0, bottom 0 10, top 0 -10, right 10 0}
-
-super + control + {y, u, i, o}
-	bspc node -z {right -10 0, top 0 10,,bottom 0 -10, left 10 0}
-
-# Toggle monocle layout
-super + Tab
-	bspc desktop -l next
-
-# Toggle floating window
-super + control + space
-	bspc node -t "~floating"
-
-# Make focused window fullscreen
-super + f
-	bspc node -t "~fullscreen"
-
 ### Screenlocker ###
 super + control + 9
         i3lock -f -i ~/Pictures/Wallpapers/lockscreen.png
@@ -78,8 +25,8 @@ super + m
 super + n
 	$TERMINAL nmtui
 # Launch application launcher
-#super + r
-#	rofi -show-icons -matching glob -show drun
+super + r
+	rofi -show-icons -matching glob -show drun
 # Launch terminal
 super + Return
 	$TERMINAL
@@ -126,4 +73,4 @@ super + control + {comma, period}
 	cmus-remote -C {"seek -2", "seek +2"}
 # Pause
 super + p
-	cmus-remote -u*/
+	cmus-remote -u
