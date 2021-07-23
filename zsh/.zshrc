@@ -50,11 +50,11 @@ alias gl="git log"
 alias gs="git status"
 alias gck="git checkout"
 
-# Pacman and Yay
-alias pacsyu="sudo pacman -Syu"
-alias yaysua="yay -Sua --noconfirm"
-alias pacunlock="sudo rm /var/lib/pacman/db.lck" # clean pacman lock
-alias paccleanup="sudo pacman -Rns $(pacman -Qtdq)" # remove orphaned packages
+ #Pacman and Yay
+#alias pacsyu="sudo pacman -Syu"
+#alias yaysua="yay -Sua --noconfirm"
+#alias pacunlock="sudo rm /var/lib/pacman/db.lck"  clean pacman lock
+#alias paccleanup="sudo pacman -Rns $(pacman -Qtdq)"  remove orphaned packages
 
 export UPDATE_ZSH_DAYS=5
 source $ZSH/oh-my-zsh.sh

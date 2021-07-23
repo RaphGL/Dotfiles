@@ -93,7 +93,7 @@ def set_widgets():
        # Battery widget
        arrow_widget('endlight'),
        widget.Image(filename='~/.config/qtile/icons/batterylight.png'),
-       widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', background=color['active']),
+        widget.Battery(format='{char} {percent:2.0%} {hour:d}:{min:02d}', background=color['active']),
        # Volume control
        arrow_widget('dark'),
        widget.Image(filename='~/.config/qtile/icons/volumedark.png'),

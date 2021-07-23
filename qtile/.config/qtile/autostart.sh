@@ -17,5 +17,7 @@ ibus-daemon -d -x
 sh -c ~/dotfiles/.scripts/cmus_daemon.sh &
 # Polkit
 lxqt-policykit-agent &
+# Bluetooth manager
+blueman-applet &
 # set ibus tray to blue color
 gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#8be9fd' &
