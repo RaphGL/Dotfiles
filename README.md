@@ -5,8 +5,7 @@ A custom dotfile manager is being written, the setup script is currently unrelia
 
 ## Screenshots  
 
-![screenshot1](screenshot1.jpg)  
-![screenshot2](screenshot2.jpg)  
+![screenshot1](screenshot1.png)
 
 ## Details  
 

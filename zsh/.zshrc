@@ -11,18 +11,11 @@ fuzzycd() {
 zle -N fuzzycd
 bindkey '^P' fuzzycd
 
-fuzzyhistory() {
-    eval $(history | fzf --layout=reverse --height=20 --tiebreak=index --tac | awk '{for(a=2;a<=NF;++a) printf $a " ";print""}')
-	zle reset-prompt
-}
-zle -N fuzzyhistory
-bindkey '^R' fuzzyhistory
-
 # Quick edit configs
 alias nvimc="$EDITOR ~/.config/nvim/init.vim"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
-alias kb="$EDITOR ~/.config/sxhkd/sxhkdrc"
+alias kbinds="$EDITOR ~/.config/sxhkd/sxhkdrc"
 
 # Change defaults
 alias grep="grep --color=auto"
@@ -50,7 +43,7 @@ alias gl="git log"
 alias gs="git status"
 alias gck="git checkout"
 
- #Pacman and Yay
+### Pacman and Yay ###
 #alias pacsyu="sudo pacman -Syu"
 #alias yaysua="yay -Sua --noconfirm"
 #alias pacunlock="sudo rm /var/lib/pacman/db.lck"  clean pacman lock
