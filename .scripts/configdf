@@ -1,0 +1,186 @@
+#!/bin/env bash
+
+# Sets up environment
+cd $HOME
+RED='\033[0;31m'
+GREEN='\u001b[32m'
+BLUE='\u001b[36m'
+NC='\u001b[0m' # No Color
+
+
+main() {
+	get_confirmation
+	find_dotfiles_dir
+
+	echo_blue "Do you want to setup NeoVim? [Y/n] "
+	read NEOVIM_SETUP
+	if [[ -z $NEOVIM_SETUP ]]
+	then
+		NEOVIM_SETUP="y"
+	fi
+
+	echo_blue "Do you want to setup Zsh? [Y/n] "
+	read ZSH_SETUP
+	if [[ -z $ZSH_SETUP ]]
+	then
+		ZSH_SETUP="y"
+	fi
+
+	echo_blue "Do you want to setup Tmux? [Y/n] "
+	read TMUX_SETUP
+	if [[ -z TMUX_SETUP ]]
+	then
+		TMUX_SETUP="y"
+	fi
+
+	if [[ ! -d "${HOME}/dotfiles" && ! -d "${HOME}/.dotfiles" && ! -d "${HOME}/Dotfiles" ]] 
+	then
+		echo_green "\nWhat would you like to call your dotfiles folder?\n"
+		echo -n "1) Dotfiles(default)  2) dotfiles  3) .dotfiles  :  "
+		read DOTFILES_FOLDER
+		case $DOTFILES_FOLDER in
+			2)
+				DOTFILES_FOLDER="${HOME}/dotfiles"
+				;;
+			3)
+				DOTFILES_FOLDER="${HOME}/.dotfiles"
+				;;
+			*) 
+				DOTFILES_FOLDER="${HOME}/Dotfiles"
+				;;
+		esac
+				
+		git clone https://github.com/RaphGL/Dotfiles.git $DOTFILES_FOLDER
+	fi
+
+
+	setup_neovim
+	setup_zsh
+	setup_tmux
+	deploy_dotfiles
+}
+
+
+get_confirmation() {
+	textblock "You're setting up RaphGL's Dotfiles"
+	echo "This is a script for deploying my dotfiles quickly on any system. Stow is required for deployment. Please make sure you have it installed beforehand."
+	echo_red "Backup your dotfiles before running this script. You might loose them!\n"
+
+	echo_green "Do you want to continue? [y/N] "
+	read CONTINUE_CONFIRMATION
+	CONTINUE_CONFIRMATION=$(tr '[A-Z]' '[a-z]' <<< $CONTINUE_CONFIRMATION)
+	if [[ $CONTINUE_CONFIRMATION == 'y' ]]
+		then
+			textblock "Starting setup. You will be asked a few questions..."
+		else
+			exit
+	fi
+}
+
+
+# Makes colored echo functions
+echo_blue() {
+	echo -ne "${BLUE}$@${NC}"
+}
+
+echo_red() {
+	echo -ne "${RED}$@${NC}"
+}
+
+echo_green() {
+	echo -ne "${GREEN}$@${NC}"
+}
+
+# generates a textbox for important messages
+textblock() {
+	echo -e "${GREEN}"
+	for ((i = 1; i < $(($(wc -c <<< "$@"))); i++))
+	do
+		echo -ne "##"
+	done
+	echo -e "${NC}"
+	echo -e "    $@${GREEN}"
+	for ((i = 1; i < $(($(wc -c <<< "$@"))); i++))
+	do
+		echo -ne "##"
+	done
+	echo -e "${NC}"
+	echo
+}
+
+# Find dotfiles location and assign it to DOTFILES_FOLDER
+find_dotfiles_dir() {
+	if [[ -d "${HOME}/dotfiles" ]]
+	then
+		DOTFILES_FOLDER="${HOME}/dotfiles"
+	fi
+	if [[ -d "${HOME}/.dotfiles" ]]
+	then
+		DOTFILES_FOLDER="${HOME}/.dotfiles"
+	fi
+	if [[ -d "${HOME}/Dotfiles" ]] 
+	then
+		DOTFILES_FOLDER="${HOME}/Dotfiles"
+	fi
+}
+
+
+setup_neovim() {
+	if [[ -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" ]]
+	then
+		echo "NeoVim is already setup."
+	elif [[ $(tr '[A-Z]' '[a-z]' <<< $NEOVIM_SETUP) == 'y' ]]
+	then
+		# Install vim-plug
+		textblock "Installing NeoVim"
+		curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	fi
+}
+
+
+setup_zsh() {
+	# Checks if Zsh should be setup
+	if [[ -e "${HOME}/.zsh-plugins/.oh-my-zsh" && -e "${HOME}/.zsh-plugins/zsh-syntax-highlighting" ]]
+	then
+		echo "Zsh is already setup."
+	elif [[ $(tr '[A-Z]' '[a-z]' <<< $ZSH_SETUP) == 'y' ]]
+	then
+		textblock "Installing Zsh"
+		mkdir -p ~/.zsh-plugins
+		# Installs zsh extension and syntax highlighting
+		echo_blue "Cloning Oh_my_zsh!\n"
+		git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.zsh-plugins/.oh-my-zsh
+		echo_blue "Cloning Zsh-syntax-highlighting\n"
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
+		chsh -s /bin/zsh
+	fi
+}
+
+
+setup_tmux() {
+	# Checks if Tmux should be installed
+	if [[ -e "${HOME}/.tmux/plugins/tpm" ]] 
+	then
+		echo "Tmux is already setup."
+	elif [[ $(tr '[A-Z]' '[a-z]' <<< $TMUX_SETUP) == 'y' ]]
+	then
+		textblock "Installing Tmux Plugin Manager\n"
+		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	fi
+}
+
+
+deploy_dotfiles() {
+	textblock "Deploying dotfiles"
+	cd $DOTFILES_FOLDER
+	mkdir -p .temp/
+	mv -t .temp *.png *.md LICENSE COPYING
+	stow --adopt *
+	mv .temp/* $DOTFILES_FOLDER
+	rmdir .temp/
+	cd $HOME
+	echo_green "** Dotfiles deployed! **\n"
+}
+
+main "$@"; exit
