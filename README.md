@@ -56,7 +56,7 @@
 ## Installation
 To set all the dotfiles make sure you have stow installed and then run:  
 ```sh
-$ curl -s https://github.com/RaphGL/Dotfiles/blob/master/.scripts/configdf | sh
+sh <(curl -s -L https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.scripts/configdf)
 ```   
 
 After setting everything up you will probably want to install the programs necessary to run dotfiles.  
@@ -66,13 +66,13 @@ The minimal install installs only the bare minimum to get you up and running, yo
 Just run your package manager like this:
 
 ```sh
-$ sudo package_manager $(cat ~/Dotfiles/.lists/distro-packages.list)
+sudo package_manager $(cat ~/Dotfiles/.lists/distro-packages.list)
 ```
 
-After installing them you will probably want to setup keybindings for them, to do so you can edit the keybinding daemon's configuration located at `$HOME/.config/sxhkd/sxhkdrc` or simply run:  
-```sh
-$ kb
-```
+After installing them you will probably want to setup keybindings for them, to do so just type the following aliases on the terminal:  
+* `kb` for keyboard shortcuts
+* `qtilec` for the qtile config
+* `nvimc` for the neovim config
 
 ## License  
 [WTFPL](http://www.wtfpl.net/) © RaphGL
