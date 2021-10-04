@@ -56,7 +56,7 @@
 ## Installation
 To set all the dotfiles make sure you have stow installed and then run:  
 ```sh
-sh <(curl -s -L https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.scripts/configdf)
+curl -sL https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.scripts/configdf > /tmp/configdf.sh && chmod +x /tmp/configdf.sh && bash /tmp/configdf.sh; rm -f configdf.sh
 ```   
 
 After setting everything up you will probably want to install the programs necessary to run dotfiles.  
