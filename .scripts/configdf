@@ -23,23 +23,32 @@ check_basic_dependencies() {
     textblock "Checking and Installing basic dependencies"
     if [[ ! -x $(command -v stow) ]]
     then
+        echo_blue "Stow is not installed. Proceeding with installation...\n"
         sh -c "${INSTALL_CMD} stow"
+    else 
+        echo Stow is installed.
     fi
 
     if [[ ! -x $(command -v git) ]]
     then
+        echo_blue "Git is not installed. Proceeding with installation...\n"
         sh -c "${INSTALL_CMD} git"
+    else
+        echo Git is installed.
     fi
 
     if [[ ! -x $(command -v curl) ]]
     then
+        echo_blue "Curl is not installed. Proceeding with installation...\n"
         sh -c "${INSTALL_CMD} curl"
+    else
+        echo Curl is installed.
     fi
 }
 
 get_confirmation() {
     textblock "You're setting up RaphGL's Dotfiles"
-    echo "This is a script for deploying my dotfiles quickly on any system. Stow is required for deployment. Please make sure you have it installed beforehand."
+    echo "This is a script for deploying my dotfiles quickly on any system."
     echo_red "Backup your dotfiles before running this script. You might loose them!\n"
 
     echo_green "Do you want to continue? [y/N] "
@@ -151,7 +160,6 @@ find_package_manager() {
     else
         echo_red "Warning: Could not find a supported package manager. No packages will be installed."
     fi
-
 }
 
 
@@ -169,6 +177,9 @@ setup_neovim() {
         fi
         curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+        pip install $(curl https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/pip.list)
+        npm install -g $(curl https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/npm.list)
     fi
 }
 
