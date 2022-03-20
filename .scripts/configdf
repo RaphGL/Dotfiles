@@ -187,22 +187,16 @@ setup_neovim() {
 
 setup_zsh() {
     # Checks if Zsh should be setup
-    if [[ -e "${HOME}/.zsh-plugins/.oh-my-zsh" && -e "${HOME}/.zsh-plugins/zsh-syntax-highlighting" && -x $(command -v zsh) ]]
-    then
-        echo "Zsh is already setup."
-    elif [[ $(tr "[:upper:]" "[:lower:]" <<< "$ZSH_SETUP") == 'y' ]]
-    then
-        textblock "Setting up Zsh"
-        if [[ ! -x "$(command -v zsh)" ]]
-        then
-            sh -c "${INSTALL_CMD} zsh"
-        fi
-        mkdir -p ~/.zsh-plugins
-        # Installs zsh extension and syntax highlighting
-        echo_blue "Cloning Zsh-syntax-highlighting\n"
-        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
-        chsh -s /bin/zsh
-    fi
+	textblock "Setting up Zsh"
+	if [[ ! -x "$(command -v zsh)" ]]
+	then
+		sh -c "${INSTALL_CMD} zsh"
+	fi
+	mkdir -p ~/.zsh-plugins
+	# Installs zsh extension and syntax highlighting
+	echo_blue "Cloning Zsh-syntax-highlighting\n"
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
+	chsh -s /bin/zsh
 }
 
 
