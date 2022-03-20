@@ -1,6 +1,3 @@
-export ZSH="$HOME/.zsh-plugins/.oh-my-zsh"
-ZSH_THEME="gentoo"
-
 ### Aliases ###
 # fuzzy find directories
 fuzzycd() {
@@ -50,7 +47,6 @@ alias gck="git checkout"
 #alias paccleanup="sudo pacman -Rns $(pacman -Qtdq)"  remove orphaned packages
 
 export UPDATE_ZSH_DAYS=5
-source $ZSH/oh-my-zsh.sh
 
 ### vi mode ###
 bindkey -v
@@ -62,17 +58,6 @@ bindkey '^v' edit-command-line
 # Enter vim buffer from normal mode
 autoload -U edit-command-line && zle -N edit-command-line && bindkey -M vicmd "^v" edit-command-line
 
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'left' vi-backward-char
-bindkey -M menuselect 'down' vi-down-line-or-history
-bindkey -M menuselect 'up' vi-up-line-or-history
-bindkey -M menuselect 'right' vi-forward-char
-# Fix backspace bug when switching modes
-bindkey "^?" backward-delete-char
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -111,6 +96,8 @@ zle-line-init() {
     echo -ne "\e[5 q"
 }
 zle -N zle-line-init
+
+PROMPT="%F{green}%n%f%F{green}@%f%F{green}%m%f %F{blue}%~%f $vcs_info_msg_0_ %# "
 
 # Syntax highlighting must be sourced in the end of the file
 source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

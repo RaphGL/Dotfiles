@@ -51,13 +51,13 @@ super + F6
 
 ### Screenshot ###
 # Take a full screenshot and copy to clipboard
-Print
+super + s
 	flameshot full -c
 # Take a full screenshot and save to to Pictures/
-control + Print
+super + control + s
 	flameshot full -p ~/Pictures
 # Select an area and take a screenshot
-shift + Print
+super + shift + s
 	flameshot gui
 
 ### Volume Control ###

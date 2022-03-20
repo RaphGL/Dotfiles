@@ -3,6 +3,7 @@ adobe-source-han-sans-jp-fonts
 alsa-utils
 anki
 bat
+blueman
 calcurse
 clang
 cmake
@@ -47,6 +48,7 @@ telegram-desktop
 tldr
 tmux
 trash-cli
+tsc
 w3m
 xclip
 xdotool

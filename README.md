@@ -69,9 +69,11 @@ Just run your package manager like this:
 sudo package_manager $(cat ~/Dotfiles/.lists/distro-packages.list)
 ```
 
-After installing them you will probably want to setup keybindings for them, to do so just type the following aliases on the terminal:  
+After installing the packages you will probably want to tweak the system to your liking.
+The following aliases redirect you to different config files related to my dotfiles:
 * `kb` for keyboard shortcuts
 * `qtilec` for the qtile config
+* `astartc` for the startup programs
 * `nvimc` for the neovim config
 
 ## License  

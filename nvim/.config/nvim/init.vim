@@ -105,6 +105,7 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-clangd',
   \ 'coc-go',
+  \ 'coc-rust-analyzer',
   \ ]
 
 " From Coc Readme

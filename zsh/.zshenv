@@ -1,5 +1,5 @@
-PATH=$PATH:$HOME/dotfiles/.scripts/
 # Defaults
+export PATH=/home/raph/.nimble/bin:$PATH
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
@@ -11,6 +11,7 @@ export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
 export QT_QPA_PLATFORMTHEME=qt5ct
+
 
 # Japanese input
 export GTK_IM_MODULE=ibus

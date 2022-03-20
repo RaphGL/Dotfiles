@@ -21,3 +21,5 @@ lxqt-policykit-agent &
 blueman-applet &
 # set ibus tray to blue color
 gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#8be9fd' &
+# network manager applet
+nm-applet &

@@ -1,7 +1,6 @@
-#!/bin/env bash
+#!/bin/sh
 
 # Sets up environment
-cd $HOME
 RED='\033[0;31m'
 GREEN='\u001b[32m'
 BLUE='\u001b[36m'
@@ -9,6 +8,7 @@ NC='\u001b[0m' # No Color
 
 
 main() {
+	cd ~
     get_confirmation
     find_dotfiles_dir
     find_package_manager
@@ -52,9 +52,9 @@ get_confirmation() {
     echo_red "Backup your dotfiles before running this script. You might loose them!\n"
 
     echo_green "Do you want to continue? [y/N] "
-    read CONTINUE_CONFIRMATION
-    CONTINUE_CONFIRMATION=$(tr '[A-Z]' '[a-z]' <<< $CONTINUE_CONFIRMATION)
-    if [[ $CONTINUE_CONFIRMATION == 'y' ]]
+    read -r CONTINUE_CONFIRMATION
+    CONTINUE_CONFIRMATION=$(tr "[:upper:]" "[:lower:]" <<< "$CONTINUE_CONFIRMATION")
+    if [[ "$CONTINUE_CONFIRMATION" == 'y' ]]
         then
             textblock "Starting setup. You will be asked a few questions..."
         else
@@ -62,22 +62,22 @@ get_confirmation() {
     fi
 
     echo_blue "Do you want to setup NeoVim? [Y/n] "
-    read NEOVIM_SETUP
-    if [[ -z $NEOVIM_SETUP ]]
+    read -r NEOVIM_SETUP
+    if [[ -z "$NEOVIM_SETUP" ]]
     then
         NEOVIM_SETUP="y"
     fi
 
     echo_blue "Do you want to setup Zsh? [Y/n] "
-    read ZSH_SETUP
-    if [[ -z $ZSH_SETUP ]]
+    read -r ZSH_SETUP
+    if [[ -z "$ZSH_SETUP" ]]
     then
         ZSH_SETUP="y"
     fi
 
     echo_blue "Do you want to setup Tmux? [Y/n] "
-    read TMUX_SETUP
-    if [[ -z $TMUX_SETUP ]]
+    read -r TMUX_SETUP
+    if [[ -z "$TMUX_SETUP" ]]
     then
         TMUX_SETUP="y"
     fi
@@ -121,8 +121,8 @@ find_dotfiles_dir() {
     then
         echo_green "\nWhat would you like to call your dotfiles folder?\n"
         echo -n "1) Dotfiles(default)  2) dotfiles  3) .dotfiles  :  "
-        read DOTFILES_FOLDER
-        case $DOTFILES_FOLDER in
+        read -r DOTFILES_FOLDER
+        case "$DOTFILES_FOLDER" in
             2)
                 DOTFILES_FOLDER="${HOME}/dotfiles"
                 ;;
@@ -134,7 +134,7 @@ find_dotfiles_dir() {
                 ;;
         esac
                 
-        git clone https://github.com/RaphGL/Dotfiles.git $DOTFILES_FOLDER
+        git clone https://github.com/RaphGL/Dotfiles.git "$DOTFILES_FOLDER"
     elif [[ -d "${HOME}/dotfiles" ]]
     then
         DOTFILES_FOLDER="${HOME}/dotfiles"
@@ -167,7 +167,7 @@ setup_neovim() {
     if [[ -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" && -x $(command -v nvim) ]]
     then
         echo "NeoVim is already setup."
-    elif [[ $(tr '[A-Z]' '[a-z]' <<< $NEOVIM_SETUP) == 'y' ]]
+    elif [[ $(tr "[:upper:]" "[:lower:]" <<< "$NEOVIM_SETUP") == 'y' ]]
     then
         # Install vim-plug
         textblock "Setting up NeoVim"
@@ -178,9 +178,10 @@ setup_neovim() {
         curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-        pip install $(curl https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/pip.list)
-        npm install -g $(curl https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/npm.list)
+        pip install $(curl "https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/pip.list")
+        npm install -g $(curl "https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/npm.list")
     fi
+
 }
 
 
@@ -189,7 +190,7 @@ setup_zsh() {
     if [[ -e "${HOME}/.zsh-plugins/.oh-my-zsh" && -e "${HOME}/.zsh-plugins/zsh-syntax-highlighting" && -x $(command -v zsh) ]]
     then
         echo "Zsh is already setup."
-    elif [[ $(tr '[A-Z]' '[a-z]' <<< $ZSH_SETUP) == 'y' ]]
+    elif [[ $(tr "[:upper:]" "[:lower:]" <<< "$ZSH_SETUP") == 'y' ]]
     then
         textblock "Setting up Zsh"
         if [[ ! -x "$(command -v zsh)" ]]
@@ -198,8 +199,6 @@ setup_zsh() {
         fi
         mkdir -p ~/.zsh-plugins
         # Installs zsh extension and syntax highlighting
-        echo_blue "Cloning Oh_my_zsh!\n"
-        git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.zsh-plugins/.oh-my-zsh
         echo_blue "Cloning Zsh-syntax-highlighting\n"
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
         chsh -s /bin/zsh
@@ -212,7 +211,7 @@ setup_tmux() {
     if [[ -e "${HOME}/.tmux/plugins/tpm" && -x $(command -v tmux) ]] 
     then
         echo "Tmux is already setup."
-    elif [[ $(tr '[A-Z]' '[a-z]' <<< $TMUX_SETUP) == 'y' ]]
+    elif [[ $(tr "[:upper:]" "[:lower:]" <<< $TMUX_SETUP) == 'y' ]]
     then
         textblock "Setting up Tmux"
         if [[ ! -x "$(command -v tmux)" ]]
@@ -226,13 +225,13 @@ setup_tmux() {
 
 deploy_dotfiles() {
     textblock "Deploying dotfiles"
-    cd $DOTFILES_FOLDER
+    cd "$DOTFILES_FOLDER"
     mkdir -p .temp/
-    mv -t .temp *.png *.md LICENSE COPYING
-    stow --adopt *
-    mv .temp/* $DOTFILES_FOLDER
+    mv -t .temp ./*.png ./*.md LICENSE COPYING
+    stow --adopt ./*
+    mv .temp/* "$DOTFILES_FOLDER"
     rmdir .temp/
-    cd $HOME
+    cd "$HOME"
     echo_green "** Dotfiles deployed! **\n"
 }
 
