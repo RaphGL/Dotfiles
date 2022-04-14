@@ -46,7 +46,18 @@ alias gck="git checkout"
 #alias pacunlock="sudo rm /var/lib/pacman/db.lck"  clean pacman lock
 #alias paccleanup="sudo pacman -Rns $(pacman -Qtdq)"  remove orphaned packages
 
-export UPDATE_ZSH_DAYS=5
+# removing necessity to use cd to change directories
+setopt  autocd autopushd
+
+### Autocompletion configuration ###
+# Load completion system
+autoload -Uz compinit && compinit
+
+# case insensitive path-completion 
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
+
+# partial completion suggestions
+zstyle ":completion:*" list-suffixes zstyle ':completion:*' expand prefix suffix 
 
 ### vi mode ###
 bindkey -v
@@ -97,7 +108,7 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-PROMPT="%F{green}%n%f%F{green}@%f%F{green}%m%f %F{blue}%~%f $vcs_info_msg_0_ %# "
+PROMPT="%F{green}%n%f%F{green}@%f%F{green}%m%f %F{blue}%~%f %# "
 
 # Syntax highlighting must be sourced in the end of the file
 source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

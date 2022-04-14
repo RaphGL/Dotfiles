@@ -1,5 +1,4 @@
 # Defaults
-export PATH=/home/raph/.nimble/bin:$PATH
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
