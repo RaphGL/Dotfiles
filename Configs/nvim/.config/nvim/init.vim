@@ -101,11 +101,12 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-tsserver',
-  \ 'coc-texlab',
   \ 'coc-python',
   \ 'coc-clangd',
   \ 'coc-go',
   \ 'coc-rust-analyzer',
+  \ 'coc-sql',
+  \ 'coc-yaml',
   \ ]
 
 " From Coc Readme

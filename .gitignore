@@ -1,12 +1,21 @@
+# Calcurse config
+Configs/calcurse/.calcurse/*
+!Configs/calcurse/.calcurse/conf
+# VSCode Config
+Configs/vscode/.config/Code\ -\ OSS/*
+Configs/!vscode/.config/Code\ -\ OSS/User/settings.json
+# FCITX config
+Configs/fcitx/
+!Configs/fcitx/.config/fcitx/config
+!Configs/fcitx/.config/fcitx/profile
+# CMUS config
+Configs/cmus/.config/cmus/*
+!Configs/cmus/.config/cmus/autosave
+# only allow wallpapers
+Configs/wallpapers/Pictures
+!Configs/wallpapers/Pictures/Wallpapers
+# NeoVim config
+Configs/nvim/.config/nvim/plugged/
+# Misc
 __pycache__/
 log.txt
-nvim/.config/nvim/plugged/
-calcurse/.calcurse/*
-!calcurse/.calcurse/conf
-vscode/.config/Code\ -\ OSS/*
-!vscode/.config/Code\ -\ OSS/User/settings.json
-fcitx/
-!fcitx/.config/fcitx/config
-!fcitx/.config/fcitx/profile
-cmus/.config/cmus/*
-!cmus/.config/cmus/autosave
