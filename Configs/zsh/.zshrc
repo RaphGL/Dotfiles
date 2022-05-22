@@ -28,8 +28,8 @@ alias gcc99="gcc -std=c99"
 alias v="nvim"
 
 # Youtube-DL
-alias yt="youtube-dl -f bestvideo+bestaudio"
-alias yta="youtube-dl -f bestaudio"
+alias yt="yt-dlp -f bestvideo+bestaudio"
+alias yta="yt-dlp -f bestaudio"
 
 # Git aliases
 alias g="git"
