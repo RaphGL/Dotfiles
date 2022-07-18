@@ -17,7 +17,7 @@ alias kbinds="$EDITOR ~/.config/sxhkd/sxhkdrc"
 # Change defaults
 alias grep="grep --color=auto"
 alias diff="diff --color=always"
-alias bat="bat --theme Dracula"
+alias cat="bat --theme Dracula"
 alias df="df -h"
 alias la="ls -lah"
 alias ll="ls -lh"

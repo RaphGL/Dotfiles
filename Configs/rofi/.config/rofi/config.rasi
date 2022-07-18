@@ -1,28 +1,41 @@
-/*Dracula theme based on the Purple official rofi theme*/
-
 * {
-    font: "Jetbrains Mono 14";
-    foreground: #f8f8f2;
-    background-color: #282a36;
-    active-background: #6272a4;
-    urgent-background: #ff5555;
+    /* Dracula theme colour palette */
+    drac-bgd: #282a36;
+    drac-cur: #44475a;
+    drac-fgd: #f8f8f2;
+    drac-cmt: #6272a4;
+    drac-cya: #8be9fd;
+    drac-grn: #50fa7b;
+    drac-ora: #ffb86c;
+    drac-pnk: #ff79c6;
+    drac-pur: #bd93f9;
+    drac-red: #ff5555;
+    drac-yel: #f1fa8c;
+
+    font: "Jetbrains Mono 12";
+
+    foreground: @drac-fgd;
+    background-color: @drac-bgd;
+    active-background: @drac-pnk;
+    urgent-background: @drac-red;
+    
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: @active-background;
+    bordercolor: #6272a4;
 }
 
 #window {
     background-color: @background-color;
-    border:           1;
+    border:           3;
     border-radius: 6;
     border-color: @bordercolor;
     padding:          5;
 }
 #mainbox {
     border:  0;
-    padding: 0;
+    padding: 5;
 }
 #message {
     border:       1px dash 0px 0px ;
@@ -54,7 +67,7 @@
 }
 #element.normal.active {
     background-color: @active-background;
-    text-color:       @foreground;
+    text-color:       @background-color;
 }
 #element.selected.normal {
     background-color: @selected-background;
@@ -66,7 +79,7 @@
 }
 #element.selected.active {
     background-color: @selected-active-background;
-    text-color:       @foreground;
+    text-color:       @background-color;
 }
 #element.alternate.normal {
     background-color: @background-color;
@@ -105,11 +118,11 @@
 }
 #entry {
     spacing:    0;
-    text-color: @foreground;
+    text-color: @drac-cya;
 }
 #prompt {
     spacing:    0;
-    text-color: @foreground;
+    text-color: @drac-grn;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
@@ -118,5 +131,9 @@
     expand:     false;
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
-    text-color: @foreground;
+    text-color: @drac-grn;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
 }
