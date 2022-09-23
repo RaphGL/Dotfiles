@@ -3,8 +3,8 @@
   "languageserver": {
         "godot": {
             "host": "127.0.0.1",
-            "filetypes": ["gdscript"],
-            "port": 6008
+            "filetypes": ["gdscript3"],
+            "port": 6005
         }
   },
   "zig.enabled": true,
