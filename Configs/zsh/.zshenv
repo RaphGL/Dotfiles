@@ -11,7 +11,6 @@ export OPENER="xdg-open"
 export PAGER="less"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-
 # Japanese input
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -30,4 +29,5 @@ export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
 export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 4) # red
 # End bold, blinking, standout, underline
 export LESS_TERMCAP_me=$(tput sgr0)
+    
 . "$HOME/.cargo/env"

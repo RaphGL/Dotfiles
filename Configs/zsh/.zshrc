@@ -24,8 +24,13 @@ alias ll="ls -lh"
 alias ls="ls --color=auto"
 alias mv="mv -i"
 alias cp="cp -i"
-alias gcc99="gcc -std=c99"
 alias v="nvim"
+
+# Enables history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
 
 # Youtube-DL
 alias yt="yt-dlp -f bestvideo+bestaudio"
@@ -40,14 +45,8 @@ alias gl="git log"
 alias gs="git status"
 alias gck="git checkout"
 
-### Pacman and Yay ###
-#alias pacsyu="sudo pacman -Syu"
-#alias yaysua="yay -Sua --noconfirm"
-#alias pacunlock="sudo rm /var/lib/pacman/db.lck"  clean pacman lock
-#alias paccleanup="sudo pacman -Rns $(pacman -Qtdq)"  remove orphaned packages
-
 # removing necessity to use cd to change directories
-setopt  autocd autopushd
+setopt autocd autopushd
 
 ### Autocompletion configuration ###
 # Load completion system
@@ -112,3 +111,5 @@ PROMPT="%F{green}%n%f%F{green}@%f%F{green}%m%f %F{blue}%~%f %# "
 
 # Syntax highlighting must be sourced in the end of the file
 source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH="$HOME/.poetry/bin:$PATH"

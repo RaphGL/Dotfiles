@@ -38,7 +38,6 @@ picom
 python-pip
 qbittorrent
 qt5ct
-qtile
 rofi
 rsync
 stow
@@ -48,7 +47,7 @@ telegram-desktop
 tldr
 tmux
 trash-cli
-tsc
+bat
 w3m
 xclip
 xdotool
