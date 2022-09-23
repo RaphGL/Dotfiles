@@ -43,6 +43,7 @@ alias gp="git push"
 alias ga="git add"
 alias gl="git log"
 alias gs="git status"
+alias gd="git diff"
 alias gck="git checkout"
 
 # removing necessity to use cd to change directories
@@ -58,8 +59,12 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 # partial completion suggestions
 zstyle ":completion:*" list-suffixes zstyle ':completion:*' expand prefix suffix 
 
-### vi mode ###
+# Show menu to select from completion
+zstyle ':completion:*' menu select
+
+### vim mode ###
 bindkey -v
+bindkey -v '^?' backward-delete-char
 export KEYTIMEOUT=1
 
 # Edit line in vim buffer ctrl-v
