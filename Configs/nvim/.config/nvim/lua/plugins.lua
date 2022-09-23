@@ -17,10 +17,10 @@ require('packer').startup(function()
 	use 'tiagofumo/vim-nerdtree-syntax-highlight'
 	-- Get Git Info
 	use 'airblade/vim-gitgutter'
-	-- Note taking plugin
-	use 'vimwiki/vimwiki'
 	-- Markdown tables easier
 	use 'dhruvasagar/vim-table-mode'
+  -- Zig syntax highlighting and file detection
+  use 'ziglang/zig.vim'
 	-- Autocompletion
 	use {
 		'neoclide/coc.nvim',

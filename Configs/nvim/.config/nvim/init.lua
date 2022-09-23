@@ -16,6 +16,11 @@ vim.cmd [[
 	augroup end
 ]]
 
+--- Autoformat languages
+vim.cmd [[
+  autocmd BufWritePre *.go Fmt
+]]
+
 ---- Config variables ----
 vim.g.mapleader = ','
 vim.opt.background = 'dark'
@@ -37,7 +42,7 @@ vim.opt.fileencoding = 'utf-8'
 vim.opt.undofile = true
 
 -- FZF --
-vim.env.FZF_DEFAULT_OPT = "--ansi --layout reverse --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+vim.env.FZF_DEFAULT_OPTS = "--preview 'bat {} --color=always --style header-filename'"
 vim.keymap.set('n', '<C-p>', ':FZF<CR>', {remap=false})
 
 -- VimWiki --

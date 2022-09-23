@@ -1,3 +1,14 @@
 {
-  "Lua.telemetry.enable": false
+  "Lua.telemetry.enable": false,
+  "languageserver": {
+        "godot": {
+            "host": "127.0.0.1",
+            "filetypes": ["gdscript"],
+            "port": 6008
+        }
+  },
+  "zig.enabled": true,
+  "zig.startUpMessage": true,
+  "zig.path": "zls",
+  "zig.debugLog": false
 }
