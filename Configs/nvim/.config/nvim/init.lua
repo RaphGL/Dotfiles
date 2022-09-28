@@ -58,9 +58,4 @@ vim.g.gitgutter_enabled = 1
 vim.g.gitgutter_map_keys = 0
 
 -- NerdTree -- 
-vim.keymap.set('i', 'jk', '<ESC>', {noremap=true})
-vim.keymap.set('n', '<C-n>', ':NERDTreeToggle<CR>')
-vim.keymap.set('v', '++', '<plug>NERDCommenterToggle')
-vim.keymap.set('n', '++', '<plug>NERDCommenterToggle')
-vim.g.NERDTreeGitStatusWithFlags = 1
-vim.g.NERDTreeIgnore = {'^node_modules$'}
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
