@@ -29,5 +29,3 @@ export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
 export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 4) # red
 # End bold, blinking, standout, underline
 export LESS_TERMCAP_me=$(tput sgr0)
-    
-. "$HOME/.cargo/env"

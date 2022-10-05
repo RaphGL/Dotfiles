@@ -1,7 +1,6 @@
 acpid
 adobe-source-han-sans-jp-fonts
 alsa-utils
-anki
 base-devel
 bat
 calcurse
@@ -39,8 +38,6 @@ openssh
 pamixer
 pcmanfm-gtk3
 picom
-pulseaudio
-pulseaudio-alsa
 python-pip
 qbittorrent
 qt5ct

@@ -13,8 +13,12 @@
     "vim.cursorStylePerMode.insert": "line",
     "vim.cursorStylePerMode.normal": "block",
     "vim.enableNeovim": true,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "GitHub Dark",
     "editor.fontLigatures": true,
     "terminal.integrated.shell.linux": "/bin/zsh",
     "files.autoSave": "afterDelay",
+    "godot_tools.gdscript_lsp_server_port": 6005,
+    "godot_tools.editor_path": "/home/raph/Downloads/Godot_v4.0-beta1_linux.x86_64 ",
+    "haskell.manageHLS": "GHCup",
+    "haskell.ghcupExecutablePath": "/usr/bin/ghcup",
 }

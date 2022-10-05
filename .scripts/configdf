@@ -175,8 +175,8 @@ setup_neovim() {
         then
             sh -c "${INSTALL_CMD} neovim"
         fi
-        curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
         pip install $(curl "https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/pip.list")
         npm install -g $(curl "https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.lists/npm.list")
@@ -219,12 +219,8 @@ setup_tmux() {
 
 deploy_dotfiles() {
     textblock "Deploying dotfiles"
-    cd "$DOTFILES_FOLDER"
-    mkdir -p .temp/
-    mv -t .temp ./*.png ./*.md LICENSE COPYING
-    stow --adopt ./*
-    mv .temp/* "$DOTFILES_FOLDER"
-    rmdir .temp/
+    cd "$DOTFILES_FOLDER"/Configs
+    stow -t $HOME --adopt ./*
     cd "$HOME"
     echo_green "** Dotfiles deployed! **\n"
 }
