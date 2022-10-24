@@ -16,6 +16,7 @@ Configs/wallpapers/Pictures
 !Configs/wallpapers/Pictures/Wallpapers
 # NeoVim config
 Configs/nvim/.config/nvim/plugged/
+Configs/nvim/.config/nvim/plugin/packer_compiled.lua
 # Misc
 __pycache__/
 log.txt

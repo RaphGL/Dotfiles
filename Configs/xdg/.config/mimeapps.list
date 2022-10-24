@@ -1,7 +1,7 @@
 [Default Applications]
 application/octet-stream=nvim.desktop
 application/pdf=org.pwmt.zathura.desktop
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=org.gnome.Evince.desktop
 application/x-gettext-translation=nvim.desktop
 application/xml=nvim.desktop
 application/x-wine-extension-ini=nvim.desktop
@@ -31,10 +31,12 @@ application/x-extension-shtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/fleet=jetbrains-fleet.desktop
 
 [Added Associations]
 text/x-python=nvim.desktop;code-oss.desktop;
-application/pdf=org.pwmt.zathura.desktop;org.pwmt.zathura.desktop;
+application/pdf=org.pwmt.zathura.desktop;org.pwmt.zathura.desktop;org.gnome.Evince.desktop;
 inode/symlink=nvim.desktop;
 audio/aac=vlc.desktop;
 audio/mpeg=vlc.desktop;
@@ -53,3 +55,4 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
+inode/directory=org.gnome.Nautilus.desktop

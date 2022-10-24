@@ -54,20 +54,37 @@
 | Fullscreen                           | super + f                      |
 
 ## Installation
-To set all the dotfiles make sure you have stow installed and then run:  
-```sh
-curl -sL https://raw.githubusercontent.com/RaphGL/Dotfiles/master/.scripts/configdf > /tmp/configdf.sh && chmod +x /tmp/configdf.sh && bash /tmp/configdf.sh; rm -f configdf.sh
-```   
+To install these dotfiles you either will have to use [Tuckr](https://github.com/RaphGL/Tuckr)(recommended) or GNU Stow.
 
-After setting everything up you will probably want to install the programs necessary to run dotfiles.  
+Tuckr:
+```sh
+$ tuckr add \*
+```
+
+Stow:
+1. Change directory to dotfiles/Configs
+2. Run:
+```sh
+$ stow -t $HOME *
+```
+
+After deploying the dotfiles, you will probably want to install the programs necessary to use my setup.  
 Note: I've created package lists for Arch and Fedora. You can find them at `Dotfiles/.lists`.
-The minimal install installs only the bare minimum to get you up and running, you will have to install most programs yourself.  
 
 Just run your package manager like this:
 
 ```sh
-sudo package_manager $(cat ~/Dotfiles/.lists/distro-packages.list)
+$ sudo <PKG_MANAGER> $(cat ~/Dotfiles/.lists/<YOUR_DISTROS_LIST>)
 ```
+
+If you want to use my neovim, tmux or zsh setups you can run the setup scripts at the `Hooks` directory.
+
+If you're using Tuckr you can just run the names of the programs you want like this:
+```sh
+$ tuckr set nvim tmux zsh 
+```
+
+## Optional Steps
 
 After installing the packages you will probably want to tweak the system to your liking.
 The following aliases redirect you to different config files related to my dotfiles:

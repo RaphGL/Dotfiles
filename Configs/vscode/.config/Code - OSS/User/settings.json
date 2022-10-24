@@ -21,4 +21,7 @@
     "godot_tools.editor_path": "/home/raph/Downloads/Godot_v4.0-beta1_linux.x86_64 ",
     "haskell.manageHLS": "GHCup",
     "haskell.ghcupExecutablePath": "/usr/bin/ghcup",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
