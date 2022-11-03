@@ -115,6 +115,6 @@ zle -N zle-line-init
 PROMPT="%F{green}%n%f%F{green}@%f%F{green}%m%f %F{blue}%~%f %# "
 
 # Syntax highlighting must be sourced in the end of the file
-source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$HOME/.poetry/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH:$HOME/.cargo/bin"
