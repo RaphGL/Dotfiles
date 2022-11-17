@@ -80,7 +80,7 @@ def set_layouts():
 
 def set_widget_defaults():
     return {
-        'font': 'Ubuntu Regular',
+        'font': 'Source Han Sans ',
         'fontsize': 16,
         'padding': 4,
     }
@@ -131,7 +131,7 @@ screens = [
     Screen(
         top=bar.Bar(
             set_widgets(),
-            30, background=color['background'],
+            26, background=color['background'],
         ),
     ),
 ]

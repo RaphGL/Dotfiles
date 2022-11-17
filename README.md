@@ -1,28 +1,28 @@
-# Raph's Dotfiles  
+# Raph's Dotfiles
 
-## Screenshots  
+## Screenshots
 
 ![screenshot1](screenshot1.png)
 
-## Details  
+## Details
 
-- **WM**: [Qtile](http://www.qtile.org/) 
-- **Terminal**: kitty  
-- **Application launcher**: Rofi  
-- **Wallpaper setter**: Feh  
-- **Wallpapers**: [here](./wallpapers/Pictures/Wallpapers/)  
-- **Text Editors**: NeoVim & VSCode  
-- **Keybindings daemon**: sxhkd  
+- **WM**: [Qtile](http://www.qtile.org/)
+- **Terminal**: kitty
+- **Application launcher**: Rofi
+- **Wallpaper setter**: Feh
+- **Wallpapers**: [here](./wallpapers/Pictures/Wallpapers/)
+- **Text Editors**: NeoVim & VSCode
+- **Keybindings daemon**: sxhkd
 
-## Keybindings  
+## Keybindings
 
 | Action                               | Shortcut                       |
-|--------------------------------------|--------------------------------|
+| ------------------------------------ | ------------------------------ |
 | **General Keybindings**              |                                |
 | Close window                         | super + w                      |
 | Kill window                          | super control + x              |
 | Logout                               | super + control + 0            |
-| Lock screen*                         | super + control + 9            |
+| Lock screen\*                        | super + control + 9            |
 | Restart window manager               | super + control + r            |
 | **Moving around**                    |                                |
 | Move between windows                 | super + {h, j, k, l}           |
@@ -38,7 +38,7 @@
 | Note-taking app(vim plugin)          | super + F6                     |
 | Calendar app                         | super + c                      |
 | Music player                         | super + m                      |
-| Application Launcher                 | super + r                      |
+| Application Launcher                 | super + space                  |
 | Terminal file manager                | super + v                      |
 | **Volume and CMUS external control** |                                |
 | Volume up                            | super + up                     |
@@ -54,16 +54,20 @@
 | Fullscreen                           | super + f                      |
 
 ## Installation
+
 To install these dotfiles you either will have to use [Tuckr](https://github.com/RaphGL/Tuckr)(recommended) or GNU Stow.
 
 Tuckr:
+
 ```sh
 $ tuckr add \*
 ```
 
 Stow:
+
 1. Change directory to dotfiles/Configs
 2. Run:
+
 ```sh
 $ stow -t $HOME *
 ```
@@ -80,18 +84,21 @@ $ sudo <PKG_MANAGER> $(cat ~/Dotfiles/.lists/<YOUR_DISTROS_LIST>)
 If you want to use my neovim, tmux or zsh setups you can run the setup scripts at the `Hooks` directory.
 
 If you're using Tuckr you can just run the names of the programs you want like this:
+
 ```sh
-$ tuckr set nvim tmux zsh 
+$ tuckr set nvim tmux zsh
 ```
 
 ## Optional Steps
 
 After installing the packages you will probably want to tweak the system to your liking.
 The following aliases redirect you to different config files related to my dotfiles:
-* `kb` for keyboard shortcuts
-* `qtilec` for the qtile config
-* `astartc` for the startup programs
-* `nvimc` for the neovim config
 
-## License  
+- `kb` for keyboard shortcuts
+- `qtilec` for the qtile config
+- `astartc` for the startup programs
+- `nvimc` for the neovim config
+
+## License
+
 [WTFPL](http://www.wtfpl.net/) © RaphGL

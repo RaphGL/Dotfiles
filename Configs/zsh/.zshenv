@@ -9,7 +9,7 @@ export VIDEO="mpv"
 export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
-export QT_QPA_PLATFORMTHEME=qt5ct
+ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # Japanese input
 export GTK_IM_MODULE=ibus

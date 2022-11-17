@@ -25,7 +25,7 @@ super + m
 super + n
 	$TERMINAL nmtui
 # Launch application launcher
-super + r
+super + space
 	rofi -show-icons -matching glob -show drun
 # Launch terminal
 super + Return
@@ -38,7 +38,7 @@ super + F2
 	$BROWSER
 # Launch code editor
 super + F3
-	code
+    vscodium
 # Launch system monitor
 super + F4
 	$TERMINAL htop
