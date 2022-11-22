@@ -80,7 +80,7 @@ def set_layouts():
 
 def set_widget_defaults():
     return {
-        'font': 'Source Han Sans ',
+        'font': 'Noto Sans',
         'fontsize': 16,
         'padding': 4,
     }
@@ -95,7 +95,7 @@ def set_widgets():
         return widget.Image(filename=image)
     return [
         # Groups and Window names
-        widget.GroupBox(inactive=color['inactive'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'],
+        widget.GroupBox(inactive=color['background'], disable_drag=True, hide_unused=True, this_current_screen_border=color['active'],
                         urgent_border=color['urgent'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding_x=1),
         widget.WindowName(format='{name}'),
         confirm_prompt,
@@ -155,6 +155,6 @@ cursor_warp = False
 floating_layout = layout.Floating(
     border_focus=color['floating'], border_width=2)
 auto_fullscreen = True
-focus_on_window_activation = "smart"
+focus_on_window_activation = "focus"
 extentions = []
 wmname = "LG3D"

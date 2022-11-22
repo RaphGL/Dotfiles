@@ -33,11 +33,12 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-6Q6RV1.desktop
+inode/directory=pcmanfm.desktop
 
 [Added Associations]
 text/x-python=nvim.desktop;code-oss.desktop;
 application/pdf=org.pwmt.zathura.desktop;org.pwmt.zathura.desktop;org.gnome.Evince.desktop;
-inode/symlink=nvim.desktop;
 audio/aac=vlc.desktop;
 audio/mpeg=vlc.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
@@ -55,4 +56,4 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-inode/directory=org.gnome.Nautilus.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-6Q6RV1.desktop;

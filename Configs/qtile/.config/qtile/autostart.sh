@@ -2,7 +2,7 @@
 # Set wallpaper
 feh --bg-fill ~/Pictures/Wallpapers/arch.png
 # Compositor
-picom -b --experimental-backends
+picom -b
 # Swap Escape and Caps Lock
 setxkbmap -option caps:swapescape
 # Hotkey daemon

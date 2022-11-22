@@ -45,9 +45,6 @@ super + F4
 # Launch mail client
 super + F5
 	thunderbird
-# Launch note taking "app"
-super + F6
-    $TERMINAL nvim ~/Documents/vimwiki/index.wiki
 
 ### Screenshot ###
 # Take a full screenshot and copy to clipboard
