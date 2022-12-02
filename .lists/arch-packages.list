@@ -19,6 +19,8 @@ gimp
 git
 go
 gscan2pdf
+gvfs
+gvfs-mtp
 htop
 i3lock
 ibus
@@ -31,12 +33,13 @@ libreoffice-still
 lxappearance
 lxqt-policykit
 mpv
+mtpfs
 neofetch
 neovim
 npm
 openssh
 pamixer
-pcmanfm-gtk3
+pcmanfm
 picom
 python-pip
 qbittorrent
