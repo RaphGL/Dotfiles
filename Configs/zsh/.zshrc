@@ -9,10 +9,14 @@ zle -N fuzzycd
 bindkey '^P' fuzzycd
 
 # Quick edit configs
-alias nvimc="$EDITOR ~/.config/nvim/init.vim"
+alias nvimc="$EDITOR ~/.config/nvim/"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
 alias astartc="$EDITOR ~/.config/qtile/autostart.sh"
 alias kbinds="$EDITOR ~/.config/sxhkd/sxhkdrc"
+if command -v helix &> /dev/null
+then 
+    alias hx="helix"
+fi
 
 # Change defaults
 alias grep="grep --color=auto"
