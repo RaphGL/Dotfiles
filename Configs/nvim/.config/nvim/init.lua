@@ -39,7 +39,6 @@ vim.opt.softtabstop = 4
 vim.opt.cursorline = true
 vim.opt.relativenumber = true
 vim.opt.fileencoding = 'utf-8'
-vim.opt.undofile = true
 
 -- FZF --
 vim.env.FZF_DEFAULT_OPTS = "--preview 'bat {} --color=always --style header-filename'"
