@@ -1,0 +1,15 @@
+{
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "keyboard.dispatch": "keyCode",
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "editor.fontLigatures": true,
+    "C_Cpp.default.cStandard": "c17",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "zls.path": "/home/raph/.config/VSCodium/User/globalStorage/augusterame.zls-vscode/zls_install/zls",
+    "C_Cpp.default.cppStandard": "c++20",
+    "window.zoomLevel": 1,
+    "editor.lineNumbers": "relative"
+}

@@ -34,7 +34,7 @@ application/x-extension-xht=firefox.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-GLOIW1.desktop
-inode/directory=pcmanfm.desktop
+inode/directory=org.gnome.Nautilus.desktop
 
 [Added Associations]
 text/x-python=nvim.desktop;code-oss.desktop;
