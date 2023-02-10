@@ -18,7 +18,6 @@ pulseaudio-alsa
 python-pip
 qtile
 rofi
-stow
 sxhkd
 ttf-ubuntu-font-family
 xclip

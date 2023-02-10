@@ -3,7 +3,9 @@ Configs/calcurse/.calcurse/*
 !Configs/calcurse/.calcurse/conf
 # VSCode Config
 Configs/vscode/.config/Code\ -\ OSS/*
-Configs/!vscode/.config/Code\ -\ OSS/User/settings.json
+!Configs/vscode/.config/Code\ -\ OSS/User/settings.json
+Configs/vscode/.config/VSCodium/*
+!Configs/vscode/.config/VSCodium/User/settings.json
 # FCITX config
 Configs/fcitx/
 !Configs/fcitx/.config/fcitx/config
