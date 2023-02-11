@@ -60,7 +60,9 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "Mofiqul/dracula.nvim"
-  use "lunarvim/darkplus.nvim"
+  use {"xiyaowong/nvim-transparent", config = function ()
+        require("transparent").setup({ enable = true})
+  end}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

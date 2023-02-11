@@ -1,10 +1,3 @@
-vim.cmd [[
-	augroup TransparentColours
-	autocmd!
-	autocmd ColorScheme * highlight normal ctermbg=NONE guiBG=NONE
-	augroup end
-]]
-
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "qf", "help", "man", "lspinfo", "spectre_panel" },
   callback = function()

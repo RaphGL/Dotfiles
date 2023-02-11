@@ -21,7 +21,10 @@ fi
 # Change defaults
 alias grep="grep --color=auto"
 alias diff="diff --color=always"
-alias cat="bat --theme Dracula"
+if command -v bat &> /dev/null
+then
+    alias cat="bat --theme Dracula"
+fi
 alias df="df -h"
 alias la="ls -lah"
 alias ll="ls -lh"
