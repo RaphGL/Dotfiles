@@ -6,7 +6,7 @@ local servers = {
     "html",
     "jsonls",
     "tsserver",
-    "sumneko_lua",
+    "lua_ls",
     "marksman",
     "sqlls",
     "svelte",
