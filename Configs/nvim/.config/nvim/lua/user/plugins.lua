@@ -61,7 +61,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use "Mofiqul/dracula.nvim"
   use {"xiyaowong/nvim-transparent", config = function ()
-        require("transparent").setup({ enable = true})
+        require("transparent").setup()
   end}
 
   -- cmp plugins
