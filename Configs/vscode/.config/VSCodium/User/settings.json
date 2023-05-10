@@ -7,7 +7,7 @@
     },
     "editor.fontLigatures": true,
     "C_Cpp.default.cStandard": "c17",
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "Default Dark+ Experimental",
     "zls.path": "/home/raph/.config/VSCodium/User/globalStorage/augusterame.zls-vscode/zls_install/zls",
     "C_Cpp.default.cppStandard": "c++20",
     "window.zoomLevel": 1,
@@ -20,6 +20,13 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

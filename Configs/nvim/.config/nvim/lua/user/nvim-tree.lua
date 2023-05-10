@@ -29,6 +29,7 @@ nvim_tree.setup {
     enable = true,
     update_cwd = true,
   },
+
   renderer = {
     root_folder_modifier = ":t",
     icons = {
@@ -57,6 +58,7 @@ nvim_tree.setup {
       },
     },
   },
+
   diagnostics = {
     enable = true,
     show_on_dirs = true,
@@ -67,6 +69,7 @@ nvim_tree.setup {
       error = "",
     },
   },
+
   view = {
     width = 30,
     side = "left",
