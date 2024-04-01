@@ -121,7 +121,9 @@ zle -N zle-line-init
 
 PROMPT="%F{green}%n%f%F{green}@%f%F{green}%m%f %F{blue}%~%f %# "
 
+export PATH="$HOME/.poetry/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH:$HOME/.cargo/bin"
+# tells the odin lsp where to find the library collections
+export ODIN_ROOT="/usr/lib/odin"
+
 # Syntax highlighting must be sourced in the end of the file
 source $HOME/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="$HOME/.poetry/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH:$HOME/.cargo/bin"
