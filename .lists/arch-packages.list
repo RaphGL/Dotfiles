@@ -1,6 +1,4 @@
-acpid
 adobe-source-han-sans-jp-fonts
-alsa-utils
 base-devel
 bat
 calcurse
@@ -33,20 +31,15 @@ lxappearance
 lxqt-policykit
 mpv
 mtpfs
-neofetch
 neovim
 npm
 openssh
-pamixer
-pcmanfm
-picom
 python-pip
 qbittorrent
 qt5ct
 qtile
 rofi
 sxhkd
-sxiv
 telegram-desktop
 tldr
 tmux

@@ -1,4 +1,4 @@
-theme = "dracula_at_night"
+theme = "github_dark"
 
 [editor]
 line-number = "relative"
