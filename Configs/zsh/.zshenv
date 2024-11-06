@@ -1,6 +1,6 @@
 # Defaults
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="helix"
+export VISUAL="helix"
 export BROWSER="firefox"
 export READER="zathura"
 export TERMINAL="kitty"
