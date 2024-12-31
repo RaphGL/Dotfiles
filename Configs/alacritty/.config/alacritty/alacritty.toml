@@ -1,0 +1,68 @@
+[colors.bright]
+black = "0x4d4d4d"
+blue = "0xcaa9fa"
+cyan = "0x9aedfe"
+green = "0x5af78e"
+magenta = "0xff92d0"
+red = "0xff6e67"
+white = "0xe6e6e6"
+yellow = "0xf4f99d"
+
+[colors.normal]
+black = "0x000000"
+blue = "0xbd93f9"
+cyan = "0x8be9fd"
+green = "0x50fa7b"
+magenta = "0xff79c6"
+red = "0xff5555"
+white = "0xbfbfbf"
+yellow = "0xf1fa8c"
+
+[colors.primary]
+background = "0x19191d"
+foreground = "0xf8f8f2"
+
+[colors.selection]
+background = "0xbbc5ff"
+text = "0x282a36"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Jetbrains Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Jetbrains Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Jetbrains Mono"
+style = "Italic"
+
+[font.normal]
+family = "Jetbrains Mono"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 1
+
+[scrolling]
+history = 5000
+
+[window]
+title = "Alacritty"
+opacity = 0.95
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 6
+y = 6

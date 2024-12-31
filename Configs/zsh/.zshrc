@@ -1,13 +1,4 @@
 ### Aliases ###
-# fuzzy find directories
-fuzzycd() {
-	DIR=$(find $HOME -maxdepth 4 -type d | fzf --layout=reverse --height=20)
-	cd $DIR
-	zle reset-prompt
-}
-zle -N fuzzycd
-bindkey '^P' fuzzycd
-
 # Quick edit configs
 alias nvimc="$EDITOR ~/.config/nvim/"
 alias qtilec="$EDITOR ~/.config/qtile/config.py"
@@ -80,6 +71,14 @@ bindkey '^v' edit-command-line
 # Enter vim buffer from normal mode
 autoload -U edit-command-line && zle -N edit-command-line && bindkey -M vicmd "^v" edit-command-line
 
+# fuzzy find directories
+fuzzycd() {
+	DIR=$(find $HOME -maxdepth 4 -type d | fzf --layout=reverse --height=20)
+	cd $DIR
+	zle reset-prompt
+}
+zle -N fuzzycd
+bindkey '^P' fuzzycd
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
