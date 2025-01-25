@@ -1,6 +1,6 @@
 import os
 from libqtile.config import Key, Screen, Group, Drag, Click
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile import layout, bar, widget, hook
 
 mod = "mod4"
@@ -99,15 +99,10 @@ def set_widgets():
                         urgent_border=color['urgent'], highlight_method='block', rounded=False, use_mouse_wheel=False, padding_x=1),
         widget.WindowName(format='{name}'),
         confirm_prompt,
-        # Battery widget
-        arrow_widget('enddark'),
-        widget.Image(filename='~/.config/qtile/icons/batterydark.png'),
-        widget.Battery(format='{char} {percent:2.0%}',
-                       background=color['inactive']),
         # Volume control
-        arrow_widget('light'),
+        arrow_widget('endlight'),
         widget.Image(filename='~/.config/qtile/icons/volumelight.png'),
-        widget.Volume(volume_app="pulseaudio", background=color['active']),
+        widget.Volume(background=color['active']),
         # System Resources
         arrow_widget('dark'),
         widget.Image(filename='~/.config/qtile/icons/memorydark.png'),
