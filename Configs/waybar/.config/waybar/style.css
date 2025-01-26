@@ -1,0 +1,190 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: white;
+        background-color: #FFB86C;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: white;
+    }
+
+    to {
+        color: white;
+        background-color: #FF5555;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    background: #282A36;
+    color: #F8F8F2;
+    font-family: "JetBrains Mono", FiraCode, Noto Sans;
+    font-size: 11pt;
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: #FFB86C;
+}
+
+#battery.critical {
+    color: #FF5555;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+    color: #FFB86C;
+}
+
+#cpu.critical {
+    color: #FF5555;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: #FFB86C;
+}
+
+#memory.critical {
+    color: #FF5555;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#network {
+    /* No styles */
+}
+
+#network.disconnected {
+    color: #FFB86C;
+}
+
+#pulseaudio {
+    /* No styles */
+}
+
+#pulseaudio.muted {
+    /* No styles */
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#temperature {
+    /* No styles */
+}
+
+#temperature.critical {
+    color: #FF5555;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    background-color: #44475A;
+    color: #F8F8F2;
+    padding: 0.2em;
+    margin-right: 0.3em;
+}
+
+#workspaces button:hover {
+    box-shadow: none; /* Remove predefined box-shadow */
+    text-shadow: none; /* Remove predefined text-shadow */
+    background: none; /* Remove predefined background color (white) */
+    transition: none; /* Disable predefined animations */
+
+    color: #8BE9FD;
+}
+
+#workspaces button.active {
+  background-color: #6272A4;
+}
+
+#workspaces button.urgent {
+  background-color: #FF5555;
+}
