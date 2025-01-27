@@ -5,7 +5,6 @@
 
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode"
     ],
 
     "modules-center": [
@@ -15,8 +14,10 @@
 
     "modules-right": [
         "tray",
+        "pulseaudio",
         "memory",
         "cpu",
+        "network",
         "battery",
     ],
 
@@ -42,6 +43,10 @@
             ""  // Icon: battery-empty
         ],
         "tooltip": true
+    },
+
+    "pulseaudio": {
+      "format": "Vol {volume}%"
     },
 
     "clock#time": {
@@ -77,7 +82,7 @@
     "network": {
         "interval": 5,
         "format-wifi": "Wifi {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "Eth {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-ethernet": "Eth Connected", // Icon: ethernet
         "format-disconnected": "Net Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
     },

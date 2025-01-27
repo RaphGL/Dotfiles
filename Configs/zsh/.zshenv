@@ -12,9 +12,8 @@ export PAGER="less"
  export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # Japanese input
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+export XMODIFIERS=fcitx
+export QT_IM_MODULE=fcitx
 
 ### Man page syntax highlighting ###
 # Start blinking
