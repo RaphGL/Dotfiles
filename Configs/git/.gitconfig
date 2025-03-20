@@ -1,0 +1,13 @@
+[user]
+	email = raphfl.dev@gmail.com
+	name = RaphGL
+
+[branch]
+	sort = committerdate
+
+[tag]
+	sort = version:refname
+
+[diff]
+	colorMoved = plain
+	renames = true
