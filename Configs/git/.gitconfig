@@ -11,3 +11,9 @@
 [diff]
 	colorMoved = plain
 	renames = true
+
+[core]
+	pager = delta
+
+[delta]
+	side-by-side = true
