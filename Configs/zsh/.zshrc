@@ -44,6 +44,10 @@ alias gs="git status"
 alias gd="git diff"
 alias gck="git checkout"
 
+# ssh sucks so we need to use this garbage to make ssh auth work
+eval `ssh-agent -s` &> /dev/null
+ssh-add -k ~/.ssh/{github,codeberg,gitlab} &> /dev/null
+
 # removing necessity to use cd to change directories
 setopt autocd autopushd
 
